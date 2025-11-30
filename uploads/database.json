@@ -1,0 +1,993 @@
+{
+  "files": [
+    {
+      "id": "file-1764387183871",
+      "filename": "1764387183871-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764387183871-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T03:33:03.875Z"
+    },
+    {
+      "id": "file-1764387903044",
+      "filename": "1764387903044-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764387903044-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T03:45:03.046Z",
+      "parsedAt": "2025-11-29T03:45:03.186Z"
+    },
+    {
+      "id": "file-1764388254060",
+      "filename": "1764388254060-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764388254060-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T03:50:54.061Z",
+      "parsedAt": "2025-11-29T03:50:54.082Z"
+    },
+    {
+      "id": "file-1764388391507",
+      "filename": "1764388391507-SamerCV.docx",
+      "originalName": "SamerCV.docx",
+      "filePath": "uploads\\1764388391507-SamerCV.docx",
+      "fileSize": 33167,
+      "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T03:53:11.511Z",
+      "parsedAt": "2025-11-29T03:53:11.530Z"
+    },
+    {
+      "id": "file-1764388587937",
+      "filename": "1764388587937-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764388587937-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T03:56:27.939Z"
+    },
+    {
+      "id": "file-1764389265742",
+      "filename": "1764389265742-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764389265742-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T04:07:45.745Z"
+    },
+    {
+      "id": "file-1764389339085",
+      "filename": "1764389339085-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764389339085-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T04:08:59.087Z"
+    },
+    {
+      "id": "file-1764389768126",
+      "filename": "1764389768126-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764389768126-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T04:16:08.129Z"
+    },
+    {
+      "id": "file-1764389809049",
+      "filename": "1764389809049-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764389809049-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T04:16:49.051Z"
+    },
+    {
+      "id": "file-1764389889065",
+      "filename": "1764389889065-SamerCV.docx",
+      "originalName": "SamerCV.docx",
+      "filePath": "uploads\\1764389889065-SamerCV.docx",
+      "fileSize": 33167,
+      "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T04:18:09.068Z",
+      "parsedAt": "2025-11-29T04:18:09.769Z"
+    },
+    {
+      "id": "file-1764390055556",
+      "filename": "1764390055556-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764390055556-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T04:20:55.557Z"
+    },
+    {
+      "id": "file-1764390317934",
+      "filename": "1764390317934-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764390317934-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T04:25:17.938Z",
+      "parsedAt": "2025-11-29T04:25:21.073Z"
+    },
+    {
+      "id": "file-1764390370843",
+      "filename": "1764390370843-SamerCV.docx",
+      "originalName": "SamerCV.docx",
+      "filePath": "uploads\\1764390370843-SamerCV.docx",
+      "fileSize": 33167,
+      "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T04:26:10.845Z",
+      "parsedAt": "2025-11-29T04:26:11.326Z"
+    },
+    {
+      "id": "file-1764390658845",
+      "filename": "1764390658845-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764390658845-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T04:30:58.849Z",
+      "parsedAt": "2025-11-29T04:31:02.008Z"
+    },
+    {
+      "id": "file-1764392089871",
+      "filename": "1764392089871-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764392089871-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T04:54:49.873Z",
+      "parsedAt": "2025-11-29T04:54:52.181Z"
+    },
+    {
+      "id": "file-1764392207668",
+      "filename": "1764392207668-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764392207668-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T04:56:47.670Z",
+      "parsedAt": "2025-11-29T04:56:47.810Z"
+    },
+    {
+      "id": "file-1764392207673",
+      "filename": "1764392207673-SamerCV.docx",
+      "originalName": "SamerCV.docx",
+      "filePath": "uploads\\1764392207673-SamerCV.docx",
+      "fileSize": 33167,
+      "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "parsed",
+      "uploadedAt": "2025-11-29T04:56:47.674Z",
+      "parsedAt": "2025-11-29T04:56:48.309Z"
+    },
+    {
+      "id": "file-1764398827283",
+      "filename": "1764398827283-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764398827283-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T06:47:07.286Z"
+    },
+    {
+      "id": "file-1764399180993",
+      "filename": "1764399180993-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764399180993-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T06:53:00.995Z"
+    },
+    {
+      "id": "file-1764399817057",
+      "filename": "1764399817057-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764399817057-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "processing",
+      "uploadedAt": "2025-11-29T07:03:37.064Z"
+    },
+    {
+      "id": "file-1764475701458",
+      "filename": "1764475701458-SamerAbiFaraj-CV_Feb2024.pdf",
+      "originalName": "SamerAbiFaraj-CV_Feb2024.pdf",
+      "filePath": "uploads\\1764475701458-SamerAbiFaraj-CV_Feb2024.pdf",
+      "fileSize": 223297,
+      "mimetype": "application/pdf",
+      "status": "parsed",
+      "uploadedAt": "2025-11-30T04:08:21.461Z",
+      "parsedAt": "2025-11-30T04:08:24.055Z"
+    },
+    {
+      "id": "file-1764475735627",
+      "filename": "1764475735627-SamerCV.docx",
+      "originalName": "SamerCV.docx",
+      "filePath": "uploads\\1764475735627-SamerCV.docx",
+      "fileSize": 33167,
+      "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "parsed",
+      "uploadedAt": "2025-11-30T04:08:55.629Z",
+      "parsedAt": "2025-11-30T04:08:56.182Z"
+    },
+    {
+      "id": "file-1764476326062",
+      "filename": "1764476326062-SamerCV.docx",
+      "originalName": "SamerCV.docx",
+      "filePath": "uploads\\1764476326062-SamerCV.docx",
+      "fileSize": 33167,
+      "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "parsed",
+      "uploadedAt": "2025-11-30T04:18:46.064Z",
+      "parsedAt": "2025-11-30T04:18:46.529Z"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-1764387903186",
+      "fileId": "file-1764387903044",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "experience": 5,
+      "skills": [
+        "ICU",
+        "Emergency Care"
+      ],
+      "licenses": [
+        "DHA"
+      ],
+      "rawText": "MOCK CV DATA:\nName: John Doe\nEmail: john.doe@example.com\nPhone: +971 50 123 4567\nExperience: 5 years as Registered Nurse\nSkills: ICU, Emergency Care, Patient Assessment\nLicenses: DHA, DOH\nEducation: BSc Nursing\nLocation: Dubai\n",
+      "parsedAt": "2025-11-29T03:45:03.186Z"
+    },
+    {
+      "id": "candidate-1764388254082",
+      "fileId": "file-1764388254060",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "experience": 5,
+      "skills": [
+        "ICU",
+        "Emergency Care"
+      ],
+      "licenses": [
+        "DHA"
+      ],
+      "rawText": "MOCK CV DATA:\nName: John Doe\nEmail: john.doe@example.com\nPhone: +971 50 123 4567\nExperience: 5 years as Registered Nurse\nSkills: ICU, Emergency Care, Patient Assessment\nLicenses: DHA, DOH\nEducation: BSc Nursing\nLocation: Dubai\n",
+      "parsedAt": "2025-11-29T03:50:54.082Z"
+    },
+    {
+      "id": "candidate-1764388391530",
+      "fileId": "file-1764388391507",
+      "name": "Sarah Smith  ",
+      "email": "sarah.smith@example.com",
+      "experience": 3,
+      "skills": [
+        "ICU",
+        "Emergency Care"
+      ],
+      "licenses": [
+        "DHA"
+      ],
+      "rawText": "MOCK CV DATA:\nName: Sarah Smith  \nEmail: sarah.smith@example.com\nExperience: 3 years as Pediatric Nurse\nSkills: Pediatrics, Patient Care, Medication Administration\nLicenses: MOH\nLocation: Abu Dhabi\n",
+      "parsedAt": "2025-11-29T03:53:11.530Z"
+    },
+    {
+      "id": "candidate-1764389889769",
+      "fileId": "file-1764389889065",
+      "name": "Samer Abi",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "SAMER ABI FARAJ Harat Al Amrousieh Choueifat-Lebanon Tel: 961-5-431835\n\nMobile: 961-3-136910\n\nE-mail:  sam_751225@hotmail.com\n\n\n\n\n\nPROFESSIONAL SUMMARY:\n\nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent\n\nreputation for leading and managing a number of successful projects, dealing with stakeholders, business owners, resolving problems, optimizing solutions, and driving the overall business.\n\n\n\nPROFESSIONAL EXPERIENCE\n\nInternational & Communication Systems (ICC Group)\n\nProject Manager Consultant\tBeirut, Lebanon\n\nOct 2023 – Present\n\n\n\nMain Responsibilities\n\n\tLead the team and grow the FinTech organization.\n\n\tHelp the team(s) master the newest development tools, workflows, and business processes.\n\n\tMentor and guide the internal team on the business and technical aspects.\n\n\tStay current with industry trends and best practices in service delivery for FinTech and integrate innovative approaches to enhance overall effectiveness.\n\n\tCollaborat",
+      "parsedAt": "2025-11-29T04:18:09.769Z"
+    },
+    {
+      "id": "candidate-1764390321073",
+      "fileId": "file-1764390317934",
+      "name": "Harat Al",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "\n\n                      SAMER ABI FARAJ \nHarat Al Amrousieh \nChoueifat-Lebanon \nTel: 961-5-431835 \nMobile: 961-3-136910 \nE-mail: sam_751225@hotmail.com  \n \nPROFESSIONAL SUMMARY: \nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent \nreputation for leading and managing a number of successful projects, dealing with stakeholders, \nbusiness owners, resolving problems, optimizing solutions, and driving the overall business. \n \nPROFESSIONAL EXPERIENCE \n \nInternational & Communication Systems (ICC Group) \nProject Manager Consultant              Beirut, Lebanon \n                           Oct 2023 – Present \n \nMain Responsibilities \n Lead the team and grow the FinTech organization. \n Help the team(s) master the newest development tools, workflows, and business processes. \n Mentor and guide the internal team on the business and technical aspects. \n Stay current with industry trends and best practices in service delivery for FinTech and integrate \n",
+      "parsedAt": "2025-11-29T04:25:21.073Z"
+    },
+    {
+      "id": "candidate-1764390371326",
+      "fileId": "file-1764390370843",
+      "name": "Samer Abi",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "SAMER ABI FARAJ Harat Al Amrousieh Choueifat-Lebanon Tel: 961-5-431835\n\nMobile: 961-3-136910\n\nE-mail:  sam_751225@hotmail.com\n\n\n\n\n\nPROFESSIONAL SUMMARY:\n\nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent\n\nreputation for leading and managing a number of successful projects, dealing with stakeholders, business owners, resolving problems, optimizing solutions, and driving the overall business.\n\n\n\nPROFESSIONAL EXPERIENCE\n\nInternational & Communication Systems (ICC Group)\n\nProject Manager Consultant\tBeirut, Lebanon\n\nOct 2023 – Present\n\n\n\nMain Responsibilities\n\n\tLead the team and grow the FinTech organization.\n\n\tHelp the team(s) master the newest development tools, workflows, and business processes.\n\n\tMentor and guide the internal team on the business and technical aspects.\n\n\tStay current with industry trends and best practices in service delivery for FinTech and integrate innovative approaches to enhance overall effectiveness.\n\n\tCollaborat",
+      "parsedAt": "2025-11-29T04:26:11.326Z"
+    },
+    {
+      "id": "candidate-1764390662007",
+      "fileId": "file-1764390658845",
+      "name": "Samer Abi Faraj",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "\n\n                      SAMER ABI FARAJ \nHarat Al Amrousieh \nChoueifat-Lebanon \nTel: 961-5-431835 \nMobile: 961-3-136910 \nE-mail: sam_751225@hotmail.com  \n \nPROFESSIONAL SUMMARY: \nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent \nreputation for leading and managing a number of successful projects, dealing with stakeholders, \nbusiness owners, resolving problems, optimizing solutions, and driving the overall business. \n \nPROFESSIONAL EXPERIENCE \n \nInternational & Communication Systems (ICC Group) \nProject Manager Consultant              Beirut, Lebanon \n                           Oct 2023 – Present \n \nMain Responsibilities \n Lead the team and grow the FinTech organization. \n Help the team(s) master the newest development tools, workflows, and business processes. \n Mentor and guide the internal team on the business and technical aspects. \n Stay current with industry trends and best practices in service delivery for FinTech and integrate \n",
+      "parsedAt": "2025-11-29T04:31:02.008Z"
+    },
+    {
+      "id": "candidate-1764392092181",
+      "fileId": "file-1764392089871",
+      "name": "Samer Abi Faraj",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "\n\n                      SAMER ABI FARAJ \nHarat Al Amrousieh \nChoueifat-Lebanon \nTel: 961-5-431835 \nMobile: 961-3-136910 \nE-mail: sam_751225@hotmail.com  \n \nPROFESSIONAL SUMMARY: \nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent \nreputation for leading and managing a number of successful projects, dealing with stakeholders, \nbusiness owners, resolving problems, optimizing solutions, and driving the overall business. \n \nPROFESSIONAL EXPERIENCE \n \nInternational & Communication Systems (ICC Group) \nProject Manager Consultant              Beirut, Lebanon \n                           Oct 2023 – Present \n \nMain Responsibilities \n Lead the team and grow the FinTech organization. \n Help the team(s) master the newest development tools, workflows, and business processes. \n Mentor and guide the internal team on the business and technical aspects. \n Stay current with industry trends and best practices in service delivery for FinTech and integrate \n",
+      "parsedAt": "2025-11-29T04:54:52.181Z"
+    },
+    {
+      "id": "candidate-1764392207810",
+      "fileId": "file-1764392207668",
+      "name": "Samer Abi Faraj",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "\n\n                      SAMER ABI FARAJ \nHarat Al Amrousieh \nChoueifat-Lebanon \nTel: 961-5-431835 \nMobile: 961-3-136910 \nE-mail: sam_751225@hotmail.com  \n \nPROFESSIONAL SUMMARY: \nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent \nreputation for leading and managing a number of successful projects, dealing with stakeholders, \nbusiness owners, resolving problems, optimizing solutions, and driving the overall business. \n \nPROFESSIONAL EXPERIENCE \n \nInternational & Communication Systems (ICC Group) \nProject Manager Consultant              Beirut, Lebanon \n                           Oct 2023 – Present \n \nMain Responsibilities \n Lead the team and grow the FinTech organization. \n Help the team(s) master the newest development tools, workflows, and business processes. \n Mentor and guide the internal team on the business and technical aspects. \n Stay current with industry trends and best practices in service delivery for FinTech and integrate \n",
+      "parsedAt": "2025-11-29T04:56:47.810Z"
+    },
+    {
+      "id": "candidate-1764392208309",
+      "fileId": "file-1764392207673",
+      "name": "Samercv",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "SAMER ABI FARAJ Harat Al Amrousieh Choueifat-Lebanon Tel: 961-5-431835\n\nMobile: 961-3-136910\n\nE-mail:  sam_751225@hotmail.com\n\n\n\n\n\nPROFESSIONAL SUMMARY:\n\nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent\n\nreputation for leading and managing a number of successful projects, dealing with stakeholders, business owners, resolving problems, optimizing solutions, and driving the overall business.\n\n\n\nPROFESSIONAL EXPERIENCE\n\nInternational & Communication Systems (ICC Group)\n\nProject Manager Consultant\tBeirut, Lebanon\n\nOct 2023 – Present\n\n\n\nMain Responsibilities\n\n\tLead the team and grow the FinTech organization.\n\n\tHelp the team(s) master the newest development tools, workflows, and business processes.\n\n\tMentor and guide the internal team on the business and technical aspects.\n\n\tStay current with industry trends and best practices in service delivery for FinTech and integrate innovative approaches to enhance overall effectiveness.\n\n\tCollaborat",
+      "parsedAt": "2025-11-29T04:56:48.309Z"
+    },
+    {
+      "id": "candidate-1764475704055",
+      "fileId": "file-1764475701458",
+      "name": "Samer Abi Faraj",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "\n\n                      SAMER ABI FARAJ \nHarat Al Amrousieh \nChoueifat-Lebanon \nTel: 961-5-431835 \nMobile: 961-3-136910 \nE-mail: sam_751225@hotmail.com  \n \nPROFESSIONAL SUMMARY: \nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent \nreputation for leading and managing a number of successful projects, dealing with stakeholders, \nbusiness owners, resolving problems, optimizing solutions, and driving the overall business. \n \nPROFESSIONAL EXPERIENCE \n \nInternational & Communication Systems (ICC Group) \nProject Manager Consultant              Beirut, Lebanon \n                           Oct 2023 – Present \n \nMain Responsibilities \n Lead the team and grow the FinTech organization. \n Help the team(s) master the newest development tools, workflows, and business processes. \n Mentor and guide the internal team on the business and technical aspects. \n Stay current with industry trends and best practices in service delivery for FinTech and integrate \n",
+      "parsedAt": "2025-11-30T04:08:24.055Z"
+    },
+    {
+      "id": "candidate-1764475736182",
+      "fileId": "file-1764475735627",
+      "name": "Samercv",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "SAMER ABI FARAJ Harat Al Amrousieh Choueifat-Lebanon Tel: 961-5-431835\n\nMobile: 961-3-136910\n\nE-mail:  sam_751225@hotmail.com\n\n\n\n\n\nPROFESSIONAL SUMMARY:\n\nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent\n\nreputation for leading and managing a number of successful projects, dealing with stakeholders, business owners, resolving problems, optimizing solutions, and driving the overall business.\n\n\n\nPROFESSIONAL EXPERIENCE\n\nInternational & Communication Systems (ICC Group)\n\nProject Manager Consultant\tBeirut, Lebanon\n\nOct 2023 – Present\n\n\n\nMain Responsibilities\n\n\tLead the team and grow the FinTech organization.\n\n\tHelp the team(s) master the newest development tools, workflows, and business processes.\n\n\tMentor and guide the internal team on the business and technical aspects.\n\n\tStay current with industry trends and best practices in service delivery for FinTech and integrate innovative approaches to enhance overall effectiveness.\n\n\tCollaborat",
+      "parsedAt": "2025-11-30T04:08:56.182Z"
+    },
+    {
+      "id": "candidate-1764476326528",
+      "fileId": "file-1764476326062",
+      "name": "Samercv",
+      "email": "sam_751225@hotmail.com",
+      "phone": " 961-5-431835",
+      "experience": 0,
+      "skills": [
+        "ICU",
+        "ER"
+      ],
+      "licenses": [],
+      "location": "UAE",
+      "rawText": "SAMER ABI FARAJ Harat Al Amrousieh Choueifat-Lebanon Tel: 961-5-431835\n\nMobile: 961-3-136910\n\nE-mail:  sam_751225@hotmail.com\n\n\n\n\n\nPROFESSIONAL SUMMARY:\n\nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent\n\nreputation for leading and managing a number of successful projects, dealing with stakeholders, business owners, resolving problems, optimizing solutions, and driving the overall business.\n\n\n\nPROFESSIONAL EXPERIENCE\n\nInternational & Communication Systems (ICC Group)\n\nProject Manager Consultant\tBeirut, Lebanon\n\nOct 2023 – Present\n\n\n\nMain Responsibilities\n\n\tLead the team and grow the FinTech organization.\n\n\tHelp the team(s) master the newest development tools, workflows, and business processes.\n\n\tMentor and guide the internal team on the business and technical aspects.\n\n\tStay current with industry trends and best practices in service delivery for FinTech and integrate innovative approaches to enhance overall effectiveness.\n\n\tCollaborat",
+      "parsedAt": "2025-11-30T04:18:46.529Z"
+    }
+  ],
+  "matches": [
+    {
+      "id": "match-1764387903297-job-1",
+      "candidateId": "candidate-1764387903186",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 72,
+      "reasons": [
+        "Experience: 5 years",
+        "Skills: ICU, Emergency Care",
+        "Licenses: DHA"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "Emergency Care"
+      ],
+      "missingRequirements": [
+        "Missing licenses: DOH"
+      ],
+      "matchedAt": "2025-11-29T03:45:03.297Z"
+    },
+    {
+      "id": "match-1764387903297-job-2",
+      "candidateId": "candidate-1764387903186",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 30,
+      "reasons": [
+        "Experience: 5 years"
+      ],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T03:45:03.297Z"
+    },
+    {
+      "id": "match-1764388254104-job-1",
+      "candidateId": "candidate-1764388254082",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 72,
+      "reasons": [
+        "Experience: 5 years",
+        "Skills: ICU, Emergency Care",
+        "Licenses: DHA"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "Emergency Care"
+      ],
+      "missingRequirements": [
+        "Missing licenses: DOH"
+      ],
+      "matchedAt": "2025-11-29T03:50:54.104Z"
+    },
+    {
+      "id": "match-1764388254104-job-2",
+      "candidateId": "candidate-1764388254082",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 30,
+      "reasons": [
+        "Experience: 5 years"
+      ],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T03:50:54.104Z"
+    },
+    {
+      "id": "match-1764388391552-job-1",
+      "candidateId": "candidate-1764388391530",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 62,
+      "reasons": [
+        "Experience: 3 years",
+        "Skills: ICU, Emergency Care",
+        "Licenses: DHA"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "Emergency Care"
+      ],
+      "missingRequirements": [
+        "Missing licenses: DOH"
+      ],
+      "matchedAt": "2025-11-29T03:53:11.552Z"
+    },
+    {
+      "id": "match-1764388391552-job-2",
+      "candidateId": "candidate-1764388391530",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 30,
+      "reasons": [
+        "Experience: 3 years"
+      ],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T03:53:11.552Z"
+    },
+    {
+      "id": "match-1764389889940-job-1",
+      "candidateId": "candidate-1764389889769",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-29T04:18:09.940Z"
+    },
+    {
+      "id": "match-1764389889940-job-2",
+      "candidateId": "candidate-1764389889769",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T04:18:09.940Z"
+    },
+    {
+      "id": "match-1764390321230-job-1",
+      "candidateId": "candidate-1764390321073",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-29T04:25:21.230Z"
+    },
+    {
+      "id": "match-1764390321230-job-2",
+      "candidateId": "candidate-1764390321073",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T04:25:21.230Z"
+    },
+    {
+      "id": "match-1764390371349-job-1",
+      "candidateId": "candidate-1764390371326",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-29T04:26:11.349Z"
+    },
+    {
+      "id": "match-1764390371349-job-2",
+      "candidateId": "candidate-1764390371326",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T04:26:11.349Z"
+    },
+    {
+      "id": "match-1764390662164-job-1",
+      "candidateId": "candidate-1764390662007",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-29T04:31:02.164Z"
+    },
+    {
+      "id": "match-1764390662164-job-2",
+      "candidateId": "candidate-1764390662007",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T04:31:02.164Z"
+    },
+    {
+      "id": "match-1764392092344-job-1",
+      "candidateId": "candidate-1764392092181",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-29T04:54:52.344Z"
+    },
+    {
+      "id": "match-1764392092344-job-2",
+      "candidateId": "candidate-1764392092181",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T04:54:52.344Z"
+    },
+    {
+      "id": "match-1764392207830-job-1",
+      "candidateId": "candidate-1764392207810",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-29T04:56:47.830Z"
+    },
+    {
+      "id": "match-1764392207830-job-2",
+      "candidateId": "candidate-1764392207810",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T04:56:47.830Z"
+    },
+    {
+      "id": "match-1764392208325-job-1",
+      "candidateId": "candidate-1764392208309",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-29T04:56:48.325Z"
+    },
+    {
+      "id": "match-1764392208325-job-2",
+      "candidateId": "candidate-1764392208309",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-29T04:56:48.325Z"
+    },
+    {
+      "id": "match-1764475704224-job-1",
+      "candidateId": "candidate-1764475704055",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-30T04:08:24.224Z"
+    },
+    {
+      "id": "match-1764475704224-job-2",
+      "candidateId": "candidate-1764475704055",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-30T04:08:24.224Z"
+    },
+    {
+      "id": "match-1764475736217-job-1",
+      "candidateId": "candidate-1764475736182",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-30T04:08:56.217Z"
+    },
+    {
+      "id": "match-1764475736217-job-2",
+      "candidateId": "candidate-1764475736182",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-30T04:08:56.217Z"
+    },
+    {
+      "id": "match-1764476326552-job-1",
+      "candidateId": "candidate-1764476326528",
+      "jobId": "job-1",
+      "jobTitle": "Registered Nurse - ICU",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "score": 27,
+      "reasons": [
+        "Skills: ICU, ER"
+      ],
+      "matchedSkills": [
+        "ICU",
+        "ER"
+      ],
+      "missingRequirements": [
+        "Needs 3 more years experience",
+        "Missing licenses: DHA, DOH"
+      ],
+      "matchedAt": "2025-11-30T04:18:46.552Z"
+    },
+    {
+      "id": "match-1764476326552-job-2",
+      "candidateId": "candidate-1764476326528",
+      "jobId": "job-2",
+      "jobTitle": "Pediatric Nurse",
+      "department": "Pediatrics",
+      "location": "Abu Dhabi",
+      "score": 0,
+      "reasons": [],
+      "matchedSkills": [],
+      "missingRequirements": [
+        "Needs 2 more years experience",
+        "Missing licenses: DOH, MOH"
+      ],
+      "matchedAt": "2025-11-30T04:18:46.552Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-1764477848288-ddkla9sh5",
+      "title": "ICU Registered Nurse",
+      "department": "Critical Care",
+      "location": "Dubai",
+      "description": "Experienced ICU nurse needed for critical care unit in Dubai. Must have strong patient assessment and emergency care skills.",
+      "requiredSkills": [
+        "ICU",
+        "Emergency Care",
+        "Patient Assessment"
+      ],
+      "preferredSkills": [],
+      "requiredLicenses": [
+        "DHA",
+        "DOH"
+      ],
+      "minExperience": 3,
+      "matchThreshold": 70,
+      "isActive": true,
+      "salaryRange": null,
+      "benefits": [],
+      "createdAt": "2025-11-30T04:44:08.288Z",
+      "updatedAt": "2025-11-30T04:44:08.288Z"
+    },
+    {
+      "id": "job-1764478633062-yl70oxeca",
+      "title": "Registered Nurse",
+      "department": "Critical Care",
+      "location": "Abu Dhabi",
+      "description": "helping elder",
+      "requiredSkills": [
+        "Patient Assessment",
+        "Patient Care",
+        "Emergency Care"
+      ],
+      "preferredSkills": [],
+      "requiredLicenses": [],
+      "minExperience": 4,
+      "matchThreshold": 70,
+      "isActive": true,
+      "salaryRange": null,
+      "benefits": [],
+      "createdAt": "2025-11-30T04:57:13.062Z",
+      "updatedAt": "2025-11-30T04:57:13.062Z"
+    }
+  ]
+}

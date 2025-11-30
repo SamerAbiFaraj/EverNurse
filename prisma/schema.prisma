@@ -1,0 +1,93 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+  //url      = env("DATABASE_URL")
+}
+
+model UploadedFile {
+  id           String   @id @default(cuid())
+  filename     String
+  originalName String
+  filePath     String
+  fileSize     Int
+  mimetype     String
+  status       FileStatus @default(processing)
+  createdAt    DateTime @default(now())
+  
+  candidateProfile CandidateProfile?
+  
+  @@map("uploaded_files")
+}
+
+model CandidateProfile {
+  id        String   @id @default(cuid())
+  fileId    String   @unique
+  name      String?
+  email     String?
+  phone     String?
+  skills    String[]
+  experience Int
+  licenses  String[]
+  specialties String[]
+  education String[]
+  location  String?
+  rawText   String
+  embedding String? // JSON string of vector embedding
+  
+  uploadedFile UploadedFile @relation(fields: [fileId], references: [id], onDelete: Cascade)
+  matches MatchResult[]
+  
+  createdAt DateTime @default(now())
+  
+  @@map("candidate_profiles")
+}
+
+model JobDescription {
+  id               String   @id @default(cuid())
+  title            String
+  department       String
+  location         String
+  requiredSkills   String[]
+  preferredSkills  String[]
+  requiredLicenses String[]
+  minExperience    Int
+  description      String
+  matchThreshold   Int      @default(70)
+  isActive         Boolean  @default(true)
+  embedding        String?  // JSON string of vector embedding
+  
+  matches MatchResult[]
+  
+  createdAt DateTime @default(now())
+  
+  @@map("job_descriptions")
+}
+
+model MatchResult {
+  id           String   @id @default(cuid())
+  candidateId  String
+  jobId        String
+  score        Int
+  reasons      String[]
+  matchedSkills String[]
+  missingRequirements String[]
+  
+  candidateProfile CandidateProfile @relation(fields: [candidateId], references: [id])
+  jobDescription JobDescription @relation(fields: [jobId], references: [id])
+  
+  createdAt DateTime @default(now())
+  
+  @@unique([candidateId, jobId])
+  @@map("match_results")
+}
+
+enum FileStatus {
+  processing
+  parsed
+  error
+}
