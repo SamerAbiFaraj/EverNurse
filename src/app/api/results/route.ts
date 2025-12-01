@@ -1,96 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readFile } from 'fs/promises';
+import { MatchingEngine } from '../../../services/matchingService';
 
-// Reuse the matching engine with improved keyword matching
-class MatchingEngine {
-    static calculateMatch(candidate: any, job: any) {
-        let score = 0;
-        const reasons = [];
-
-        // Experience match (30 points max)
-        if (candidate.experience >= job.minExperience) {
-            const expScore = Math.min(30, (candidate.experience / job.minExperience) * 20);
-            score += expScore;
-            reasons.push(`Experience: ${candidate.experience} years`);
-        }
-
-        // Skills match (40 points max)
-        let skillsScore = 0;
-        const matchedSkills = candidate.skills.filter((skill: string) =>
-            job.requiredSkills.some((reqSkill: string) =>
-                reqSkill.toLowerCase().includes(skill.toLowerCase()) ||
-                skill.toLowerCase().includes(reqSkill.toLowerCase())
-            )
-        );
-
-        if (matchedSkills.length > 0 && job.requiredSkills.length > 0) {
-            skillsScore = (matchedSkills.length / job.requiredSkills.length) * 40;
-            score += skillsScore;
-            reasons.push(`Skills: ${matchedSkills.join(', ')}`);
-        } else if (job.requiredSkills.length === 0) {
-            // Fallback: Analyze job description for keywords
-            const descriptionScore = this.analyzeJobDescription(candidate, job);
-            score += descriptionScore.score;
-            if (descriptionScore.keywords.length > 0) {
-                reasons.push(`Matched keywords: ${descriptionScore.keywords.join(', ')}`);
-            }
-        }
-
-        // License match (30 points max)
-        let licenseScore = 0;
-        const matchedLicenses = candidate.licenses.filter((license: string) =>
-            job.requiredLicenses.includes(license)
-        );
-
-        if (matchedLicenses.length > 0 && job.requiredLicenses.length > 0) {
-            licenseScore = (matchedLicenses.length / job.requiredLicenses.length) * 30;
-            score += licenseScore;
-            reasons.push(`Licenses: ${matchedLicenses.join(', ')}`);
-        }
-
-        return {
-            score: Math.min(100, Math.round(score)),
-            reasons,
-            matchedSkills
-        };
-    }
-
-    static analyzeJobDescription(candidate: any, job: any) {
-        const jobText = `${job.title} ${job.description}`.toLowerCase();
-        const candidateText = candidate.rawText.toLowerCase();
-
-        const keywords = [
-            'project management', 'banking', 'credit card', 'fintech', 'it', 'software',
-            'development', 'database', 'cloud', 'leadership', 'management', 'strategy',
-            'planning', 'agile', 'scrum', 'api', 'integration', 'consulting',
-            'nursing', 'healthcare', 'patient care', 'clinical', 'emergency'
-        ];
-
-        const matchedKeywords: string[] = [];
-        let keywordMatches = 0;
-
-        for (const keyword of keywords) {
-            if (jobText.includes(keyword) && candidateText.includes(keyword)) {
-                matchedKeywords.push(keyword);
-                keywordMatches++;
-            }
-        }
-
-        for (const skill of candidate.skills) {
-            if (jobText.includes(skill.toLowerCase()) && !matchedKeywords.includes(skill.toLowerCase())) {
-                matchedKeywords.push(skill);
-                keywordMatches++;
-            }
-        }
-
-        const score = Math.min(40, keywordMatches * 8);
-
-        return {
-            score,
-            keywords: matchedKeywords.slice(0, 5)
-        };
-    }
-}
 
 export async function GET(request: NextRequest) {
     console.log('🔍 RESULTS API CALLED - Fetching all candidates with matches...');
@@ -131,7 +42,7 @@ export async function GET(request: NextRequest) {
             const allMatches = [];
 
             for (const job of targetJobs) {
-                const matchResult = MatchingEngine.calculateMatch(candidate, job);
+                const matchResult = await MatchingEngine.calculateMatch(candidate, job);
 
                 // Include ALL matches, regardless of score
                 allMatches.push({
@@ -150,7 +61,7 @@ export async function GET(request: NextRequest) {
             allMatches.sort((a, b) => b.score - a.score);
 
             candidatesWithMatches.push({
-                candidateId: candidate.id,
+                id: candidate.id,
                 fileId: candidate.fileId,
                 name: candidate.name,
                 email: candidate.email,

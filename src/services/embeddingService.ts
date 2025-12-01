@@ -95,4 +95,83 @@ export class EmbeddingService {
 
         return parts.filter(p => p).join('\n');
     }
+
+    /**
+     * Generate embeddings for multiple texts in a single batch request
+     * More efficient than individual requests
+     */
+    static async generateBatchEmbeddings(texts: string[]): Promise<number[][]> {
+        try {
+            if (texts.length === 0) return [];
+
+            console.log(`🧠 Generating ${texts.length} embeddings in batch...`);
+
+            // Truncate each text if too long
+            const truncatedTexts = texts.map(text => text.substring(0, 32000));
+
+            const response = await openai.embeddings.create({
+                model: 'text-embedding-3-small',
+                input: truncatedTexts,
+            });
+
+            const embeddings = response.data.map(item => item.embedding);
+            console.log(`✅ Generated ${embeddings.length} embeddings`);
+
+            return embeddings;
+        } catch (error) {
+            console.error('❌ Batch embedding generation failed:', error);
+            throw new Error(`Failed to generate batch embeddings: ${error instanceof Error ? error.message : 'Unknown error'}`);
+        }
+    }
+
+    /**
+     * Generate embeddings for individual skills/requirements
+     * Returns a map of skill -> embedding
+     */
+    static async generateSkillEmbeddings(skills: string[]): Promise<Map<string, number[]>> {
+        if (skills.length === 0) return new Map();
+
+        const embeddings = await this.generateBatchEmbeddings(skills);
+        const skillEmbeddingMap = new Map<string, number[]>();
+
+        skills.forEach((skill, index) => {
+            skillEmbeddingMap.set(skill, embeddings[index]);
+        });
+
+        return skillEmbeddingMap;
+    }
+
+    /**
+     * Calculate semantic similarity between a candidate skill and a required skill
+     * Returns a similarity score between 0 and 1
+     */
+    static calculateSkillSimilarity(
+        candidateSkillEmbedding: number[],
+        requiredSkillEmbedding: number[]
+    ): number {
+        const similarity = this.calculateCosineSimilarity(candidateSkillEmbedding, requiredSkillEmbedding);
+        // Normalize to 0-1 range (cosine similarity is -1 to 1)
+        return Math.max(0, similarity);
+    }
+
+    /**
+     * Find the best matching candidate skill for a required skill
+     * Returns the best match with its similarity score
+     */
+    static findBestSkillMatch(
+        requiredSkillEmbedding: number[],
+        candidateSkillEmbeddings: Map<string, number[]>
+    ): { skill: string; similarity: number } | null {
+        let bestMatch: { skill: string; similarity: number } | null = null;
+
+        for (const [skill, embedding] of candidateSkillEmbeddings.entries()) {
+            const similarity = this.calculateSkillSimilarity(embedding, requiredSkillEmbedding);
+
+            if (!bestMatch || similarity > bestMatch.similarity) {
+                bestMatch = { skill, similarity };
+            }
+        }
+
+        return bestMatch;
+    }
 }

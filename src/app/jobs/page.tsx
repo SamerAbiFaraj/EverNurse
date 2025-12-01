@@ -195,21 +195,31 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
         matchThreshold: 70
     });
 
+    // Local state for requirements string to allow typing spaces
+    const [requirementsString, setRequirementsString] = useState('');
+
     useEffect(() => {
         if (job) {
             setFormData(job);
+            setRequirementsString(job.requirements?.join(', ') || '');
         }
     }, [job]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        onSave(formData);
+        // Parse requirements string into array on submit
+        const requirementsArray = requirementsString
+            .split(',')
+            .map(s => s.trim())
+            .filter(s => s.length > 0);
+
+        onSave({ ...formData, requirements: requirementsArray });
     };
 
     return (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-fade-in">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto m-4 animate-scale-up">
-                <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center z-50 animate-fade-in overflow-y-auto py-10">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl m-4 animate-scale-up relative h-fit">
+                <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50 sticky top-0 z-10 rounded-t-2xl">
                     <h2 className="text-2xl font-bold text-evernurse-dark">
                         {job ? 'Edit Job Position' : 'Create New Job'}
                     </h2>
@@ -289,11 +299,12 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
                         </label>
                         <input
                             type="text"
-                            value={formData.requirements?.join(', ') || ''}
-                            onChange={e => setFormData({ ...formData, requirements: e.target.value.split(',').map(s => s.trim()) })}
+                            value={requirementsString}
+                            onChange={e => setRequirementsString(e.target.value)}
                             className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-evernurse-teal focus:border-transparent transition-all"
                             placeholder="e.g. BLS, ACLS, 3+ years experience"
                         />
+                        <p className="text-xs text-gray-500 mt-1">Separate multiple requirements with commas</p>
                     </div>
 
                     <div className="flex justify-end gap-3 pt-6 border-t border-gray-100">

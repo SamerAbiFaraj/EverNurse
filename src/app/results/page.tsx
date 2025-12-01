@@ -47,6 +47,28 @@ export default function ResultsPage() {
         }
     };
 
+    const deleteCandidate = async (id: string, name: string) => {
+        if (!confirm(`Are you sure you want to delete ${name}? This action cannot be undone.`)) {
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/candidates?id=${id}`, {
+                method: 'DELETE',
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                setCandidates(prev => prev.filter(c => c.id !== id));
+            } else {
+                alert('Failed to delete candidate: ' + data.error);
+            }
+        } catch (error) {
+            console.error('Error deleting candidate:', error);
+            alert('An error occurred while deleting the candidate');
+        }
+    };
+
     const filteredCandidates = candidates?.filter(c => {
         const bestMatch = c.matches.length > 0 ? Math.max(...c.matches.map(m => m.score)) : 0;
         const matchesSearch = c.name.toLowerCase().includes(filter.search.toLowerCase()) ||
@@ -187,7 +209,12 @@ export default function ResultsPage() {
                 {/* Candidates List */}
                 <div className="space-y-6">
                     {filteredCandidates.map((candidate, index) => (
-                        <CandidateCard key={candidate.id} candidate={candidate} index={index} />
+                        <CandidateCard
+                            key={`${candidate.id}-${index}`}
+                            candidate={candidate}
+                            index={index}
+                            onDelete={() => deleteCandidate(candidate.id, candidate.name)}
+                        />
                     ))}
                 </div>
             </div>
@@ -235,7 +262,7 @@ function StatCard({ title, value, icon, color, delay }: { title: string, value: 
     );
 }
 
-function CandidateCard({ candidate, index }: { candidate: Candidate, index: number }) {
+function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, index: number, onDelete: () => void }) {
     const bestMatch = candidate.matches.length > 0 ? candidate.matches.reduce((prev, current) => (prev.score > current.score) ? prev : current) : null;
 
     return (
@@ -290,9 +317,17 @@ function CandidateCard({ candidate, index }: { candidate: Candidate, index: numb
                 <div className="p-6 md:w-2/3">
                     <div className="flex justify-between items-center mb-4">
                         <h4 className="font-bold text-evernurse-dark">Qualifying Job Matches</h4>
-                        <button className="text-evernurse-teal text-sm font-medium hover:underline">
-                            View Full CV
-                        </button>
+                        <div className="flex gap-2">
+                            <button
+                                onClick={onDelete}
+                                className="text-red-500 text-sm font-medium hover:text-red-700 hover:bg-red-50 px-3 py-1 rounded transition-colors"
+                            >
+                                Delete
+                            </button>
+                            <button className="text-evernurse-teal text-sm font-medium hover:underline">
+                                View Full CV
+                            </button>
+                        </div>
                     </div>
 
                     <div className="space-y-3">

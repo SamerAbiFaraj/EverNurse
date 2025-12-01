@@ -117,7 +117,7 @@ export default function UploadPage() {
                         status: 'completed',
                         candidate: parseResult.candidate,
                         matches: matchResult.matches,
-                        message: `✅ Processed! Found ${matchResult.matches.length} matches`
+                        message: `✅ Processing complete! View results in the dashboard.`
                     }
                     : result
             ));

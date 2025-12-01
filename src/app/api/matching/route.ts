@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readFile, writeFile } from 'fs/promises';
+import { MatchingEngine } from '../../../services/matchingService';
 
 // Helper function to get jobs from database
 async function getActiveJobs() {
@@ -44,119 +45,6 @@ async function getActiveJobs() {
     }
 }
 
-class MatchingEngine {
-    static calculateMatch(candidate: any, job: any) {
-        let score = 0;
-        const reasons = [];
-
-        // Experience match (30 points max)
-        if (candidate.experience >= job.minExperience) {
-            const expScore = Math.min(30, (candidate.experience / job.minExperience) * 20);
-            score += expScore;
-            reasons.push(`Experience: ${candidate.experience} years`);
-        }
-
-        // Skills match (40 points max)
-        let skillsScore = 0;
-        const matchedSkills = candidate.skills.filter((skill: string) =>
-            job.requiredSkills.some((reqSkill: string) =>
-                reqSkill.toLowerCase().includes(skill.toLowerCase()) ||
-                skill.toLowerCase().includes(reqSkill.toLowerCase())
-            )
-        );
-
-        if (matchedSkills.length > 0 && job.requiredSkills.length > 0) {
-            skillsScore = (matchedSkills.length / job.requiredSkills.length) * 40;
-            score += skillsScore;
-            reasons.push(`Skills: ${matchedSkills.join(', ')}`);
-        } else if (job.requiredSkills.length === 0) {
-            // Fallback: Analyze job description for keywords
-            const descriptionScore = this.analyzeJobDescription(candidate, job);
-            score += descriptionScore.score;
-            if (descriptionScore.keywords.length > 0) {
-                reasons.push(`Matched keywords: ${descriptionScore.keywords.join(', ')}`);
-            }
-        }
-
-        // License match (30 points max)
-        let licenseScore = 0;
-        const matchedLicenses = candidate.licenses.filter((license: string) =>
-            job.requiredLicenses.includes(license)
-        );
-
-        if (matchedLicenses.length > 0 && job.requiredLicenses.length > 0) {
-            licenseScore = (matchedLicenses.length / job.requiredLicenses.length) * 30;
-            score += licenseScore;
-            reasons.push(`Licenses: ${matchedLicenses.join(', ')}`);
-        }
-
-        return {
-            score: Math.min(100, Math.round(score)),
-            reasons,
-            matchedSkills,
-            missingRequirements: this.findMissingRequirements(candidate, job)
-        };
-    }
-
-    static analyzeJobDescription(candidate: any, job: any) {
-        // Extract keywords from job title and description
-        const jobText = `${job.title} ${job.description}`.toLowerCase();
-        const candidateText = candidate.rawText.toLowerCase();
-
-        // Common keywords to look for
-        const keywords = [
-            'project management', 'banking', 'credit card', 'fintech', 'it', 'software',
-            'development', 'database', 'cloud', 'leadership', 'management', 'strategy',
-            'planning', 'agile', 'scrum', 'api', 'integration', 'consulting',
-            'nursing', 'healthcare', 'patient care', 'clinical', 'emergency'
-        ];
-
-        const matchedKeywords: string[] = [];
-        let keywordMatches = 0;
-
-        for (const keyword of keywords) {
-            if (jobText.includes(keyword) && candidateText.includes(keyword)) {
-                matchedKeywords.push(keyword);
-                keywordMatches++;
-            }
-        }
-
-        // Also check if candidate skills appear in job description
-        for (const skill of candidate.skills) {
-            if (jobText.includes(skill.toLowerCase()) && !matchedKeywords.includes(skill.toLowerCase())) {
-                matchedKeywords.push(skill);
-                keywordMatches++;
-            }
-        }
-
-        // Calculate score: up to 40 points based on keyword matches
-        const score = Math.min(40, keywordMatches * 8);
-
-        return {
-            score,
-            keywords: matchedKeywords.slice(0, 5) // Limit to top 5 for display
-        };
-    }
-
-    static findMissingRequirements(candidate: any, job: any) {
-        const missing = [];
-
-        if (candidate.experience < job.minExperience) {
-            missing.push(`Needs ${job.minExperience - candidate.experience} more years experience`);
-        }
-
-        const missingLicenses = job.requiredLicenses.filter((license: string) =>
-            !candidate.licenses.includes(license)
-        );
-
-        if (missingLicenses.length > 0) {
-            missing.push(`Missing licenses: ${missingLicenses.join(', ')}`);
-        }
-
-        return missing;
-    }
-}
-
 export async function POST(request: NextRequest) {
     try {
         const { candidateId } = await request.json();
@@ -192,8 +80,8 @@ export async function POST(request: NextRequest) {
         }
 
         // Calculate matches with all jobs
-        const matches = jobs.map(job => {
-            const matchResult = MatchingEngine.calculateMatch(candidate, job);
+        const matches = await Promise.all(jobs.map(async (job: any) => {
+            const matchResult = await MatchingEngine.calculateMatch(candidate, job);
 
             return {
                 jobId: job.id,
@@ -202,12 +90,31 @@ export async function POST(request: NextRequest) {
                 location: job.location,
                 ...matchResult
             };
+        }));
+
+        // Update database with any new embeddings generated during matching
+        let dbUpdated = false;
+
+        // Update candidate embedding
+        const dbCandidate = database.candidates.find((c: any) => c.id === candidateId);
+        if (candidate.embedding && (!dbCandidate.embedding || dbCandidate.embedding.length === 0)) {
+            dbCandidate.embedding = candidate.embedding;
+            dbUpdated = true;
+        }
+
+        // Update job embeddings
+        jobs.forEach((job: any) => {
+            const dbJob = database.jobs.find((j: any) => j.id === job.id);
+            if (job.embedding && dbJob && (!dbJob.embedding || dbJob.embedding.length === 0)) {
+                dbJob.embedding = job.embedding;
+                dbUpdated = true;
+            }
         });
 
         // Store matches in database
         if (!database.matches) database.matches = [];
 
-        matches.forEach(match => {
+        matches.forEach((match: any) => {
             database.matches.push({
                 id: `match-${Date.now()}-${match.jobId}`,
                 candidateId: candidate.id,

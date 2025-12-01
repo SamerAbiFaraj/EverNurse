@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { EmbeddingService } from '../../../services/embeddingService';
 
 // Import mammoth with named import
 import { extractRawText } from 'mammoth';
@@ -360,12 +361,22 @@ export async function POST(request: NextRequest) {
         // Update database with parsed data
         if (!database.candidates) database.candidates = [];
 
-        const candidateRecord = {
+        const candidateRecord: any = {
             id: `candidate-${Date.now()}`,
             fileId: fileRecord.id,
             ...candidateData,
             parsedAt: new Date().toISOString()
         };
+
+        // Generate embedding for the candidate
+        try {
+            const candidateText = EmbeddingService.prepareCandidateText(candidateRecord);
+            candidateRecord.embedding = await EmbeddingService.generateEmbedding(candidateText);
+            candidateRecord.embeddingGeneratedAt = new Date().toISOString();
+        } catch (error) {
+            console.error('⚠️ Failed to generate embedding for candidate:', error);
+            // Continue without embedding - it will be generated on demand during matching
+        }
 
         database.candidates.push(candidateRecord);
 
