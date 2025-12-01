@@ -44,6 +44,11 @@ export async function POST(request: NextRequest) {
         const results = [];
         const db = await readDatabase();
 
+        // Ensure arrays exist
+        if (!db.files) db.files = [];
+        if (!db.candidates) db.candidates = [];
+        if (!db.matches) db.matches = [];
+
         for (const file of files) {
             console.log(`📄 Processing: ${file.name} (${file.type})`);
 
@@ -149,8 +154,8 @@ export async function GET() {
         return NextResponse.json({
             message: 'Upload API is working',
             stats: {
-                totalFiles: db.files.length,
-                uploadedFiles: db.files.filter((f: any) => f.status === 'processing').length
+                totalFiles: db.files?.length || 0,
+                uploadedFiles: db.files?.filter((f: any) => f.status === 'processing').length || 0
             }
         });
     } catch (error) {

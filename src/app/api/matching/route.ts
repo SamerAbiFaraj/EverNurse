@@ -57,6 +57,7 @@ class MatchingEngine {
         }
 
         // Skills match (40 points max)
+        let skillsScore = 0;
         const matchedSkills = candidate.skills.filter((skill: string) =>
             job.requiredSkills.some((reqSkill: string) =>
                 reqSkill.toLowerCase().includes(skill.toLowerCase()) ||
@@ -64,19 +65,27 @@ class MatchingEngine {
             )
         );
 
-        if (matchedSkills.length > 0) {
-            const skillsScore = (matchedSkills.length / job.requiredSkills.length) * 40;
+        if (matchedSkills.length > 0 && job.requiredSkills.length > 0) {
+            skillsScore = (matchedSkills.length / job.requiredSkills.length) * 40;
             score += skillsScore;
             reasons.push(`Skills: ${matchedSkills.join(', ')}`);
+        } else if (job.requiredSkills.length === 0) {
+            // Fallback: Analyze job description for keywords
+            const descriptionScore = this.analyzeJobDescription(candidate, job);
+            score += descriptionScore.score;
+            if (descriptionScore.keywords.length > 0) {
+                reasons.push(`Matched keywords: ${descriptionScore.keywords.join(', ')}`);
+            }
         }
 
         // License match (30 points max)
+        let licenseScore = 0;
         const matchedLicenses = candidate.licenses.filter((license: string) =>
             job.requiredLicenses.includes(license)
         );
 
-        if (matchedLicenses.length > 0) {
-            const licenseScore = (matchedLicenses.length / job.requiredLicenses.length) * 30;
+        if (matchedLicenses.length > 0 && job.requiredLicenses.length > 0) {
+            licenseScore = (matchedLicenses.length / job.requiredLicenses.length) * 30;
             score += licenseScore;
             reasons.push(`Licenses: ${matchedLicenses.join(', ')}`);
         }
@@ -86,6 +95,46 @@ class MatchingEngine {
             reasons,
             matchedSkills,
             missingRequirements: this.findMissingRequirements(candidate, job)
+        };
+    }
+
+    static analyzeJobDescription(candidate: any, job: any) {
+        // Extract keywords from job title and description
+        const jobText = `${job.title} ${job.description}`.toLowerCase();
+        const candidateText = candidate.rawText.toLowerCase();
+
+        // Common keywords to look for
+        const keywords = [
+            'project management', 'banking', 'credit card', 'fintech', 'it', 'software',
+            'development', 'database', 'cloud', 'leadership', 'management', 'strategy',
+            'planning', 'agile', 'scrum', 'api', 'integration', 'consulting',
+            'nursing', 'healthcare', 'patient care', 'clinical', 'emergency'
+        ];
+
+        const matchedKeywords: string[] = [];
+        let keywordMatches = 0;
+
+        for (const keyword of keywords) {
+            if (jobText.includes(keyword) && candidateText.includes(keyword)) {
+                matchedKeywords.push(keyword);
+                keywordMatches++;
+            }
+        }
+
+        // Also check if candidate skills appear in job description
+        for (const skill of candidate.skills) {
+            if (jobText.includes(skill.toLowerCase()) && !matchedKeywords.includes(skill.toLowerCase())) {
+                matchedKeywords.push(skill);
+                keywordMatches++;
+            }
+        }
+
+        // Calculate score: up to 40 points based on keyword matches
+        const score = Math.min(40, keywordMatches * 8);
+
+        return {
+            score,
+            keywords: matchedKeywords.slice(0, 5) // Limit to top 5 for display
         };
     }
 
@@ -117,8 +166,8 @@ export async function POST(request: NextRequest) {
         }
 
         // Read database
-        const db = await readFile('./uploads/database.json', 'utf-8');
-        const database = JSON.parse(db);
+        const dbContent = await readFile('./uploads/database.json', 'utf-8');
+        const database = JSON.parse(dbContent);
 
         // Find candidate
         const candidate = database.candidates.find((c: any) => c.id === candidateId);

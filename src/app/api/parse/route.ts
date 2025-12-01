@@ -91,44 +91,61 @@ class RealParser {
         const phone = phoneMatch ? phoneMatch[0] : '';
         if (phone) console.log('✅ Phone extracted:', phone);
 
-        // Extract experience (look for years)
+        // Extract experience (look for years) - IMPROVED REGEX
         let experience = 0;
-        const experienceMatches = [
-            ...text.matchAll(/(\d+)\s*(?:year|yr)s?(?:\s+of)?\s+(?:experience|exp\.?)/gi),
-            ...text.matchAll(/(\d+)\s*-\s*(\d+)\s*years/gi),
-            ...text.matchAll(/experience\s*[:\-]?\s*(\d+)/gi)
+        // Try multiple patterns to catch "17 years' experience" and variations
+        const textSample = text.substring(0, 1000); // Check first 1000 chars
+        const patterns = [
+            /(\d+)\s+years?['\u2019\u0027]?\s*(?:of\s+)?experience/gi,
+            /(?:with|have)\s+(\d+)\s+years/gi,
+            /experience[:\s]+(\d+)\s+years/gi
         ];
 
-        if (experienceMatches.length > 0) {
-            const lastMatch = experienceMatches[experienceMatches.length - 1];
-            experience = parseInt(lastMatch[1]) || 0;
-            console.log('✅ Experience extracted:', experience, 'years');
+        for (const pattern of patterns) {
+            const matches = [...textSample.matchAll(pattern)];
+            if (matches.length > 0) {
+                experience = parseInt(matches[0][1]) || 0;
+                console.log('✅ Experience extracted:', experience, 'years from pattern:', pattern);
+                break;
+            }
         }
 
-        // Extract skills (common nursing/healthcare skills)
-        const nursingSkills = [
+        if (experience === 0) {
+            console.log('⚠️ No experience pattern matched in text');
+        }
+
+        // Extract skills (EXPANDED LIST)
+        const commonSkills = [
+            // Nursing/Healthcare
             'ACLS', 'BLS', 'PALS', 'ICU', 'ER', 'Emergency', 'Critical Care', 'Pediatrics',
             'Geriatrics', 'Medication', 'Assessment', 'Patient Care', 'Ventilator',
             'Trauma', 'Surgical', 'Recovery', 'Nursing', 'Healthcare', 'Clinical',
-            'Telemetry', 'Cardiac', 'Oncology', 'Orthopedics', 'Psychiatric', 'Mental Health'
+            'Telemetry', 'Cardiac', 'Oncology', 'Orthopedics', 'Psychiatric', 'Mental Health',
+            // IT/Tech
+            'Project Management', 'IT', 'Software', 'Development', 'Database', 'SQL', 'Cloud',
+            'AWS', 'Azure', 'FinTech', 'Banking', 'Credit Card', 'Payment', 'Digital',
+            'Transformation', 'Agile', 'Scrum', 'Waterfall', 'API', 'Integration',
+            // Business/Management
+            'Leadership', 'Management', 'Strategy', 'Planning', 'Budgeting', 'Stakeholder',
+            'Business Analysis', 'Operations', 'Consulting', 'Team Building'
         ];
 
-        const foundSkills = nursingSkills.filter(skill =>
+        const foundSkills = commonSkills.filter(skill =>
             lowerText.includes(skill.toLowerCase())
         );
         console.log('✅ Skills found:', foundSkills);
 
-        // Extract licenses (UAE healthcare licenses)
-        const uaeLicenses = ['DHA', 'DOH', 'MOH', 'HAAD'];
-        const foundLicenses = uaeLicenses.filter(license =>
+        // Extract licenses (UAE healthcare licenses + professional certs)
+        const licenses = ['DHA', 'DOH', 'MOH', 'HAAD', 'PMP', 'PCI-DSS', 'AWS'];
+        const foundLicenses = licenses.filter(license =>
             text.toUpperCase().includes(license)
         );
         console.log('✅ Licenses found:', foundLicenses);
 
-        // Extract location (UAE locations)
-        const uaeLocations = ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Ras Al Khaimah', 'Fujairah', 'Al Ain'];
+        // Extract location (UAE locations + Lebanon)
+        const locations = ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Ras Al Khaimah', 'Fujairah', 'Al Ain', 'Lebanon', 'Beirut'];
         let location = '';
-        for (const loc of uaeLocations) {
+        for (const loc of locations) {
             if (text.includes(loc)) {
                 location = loc;
                 break;
