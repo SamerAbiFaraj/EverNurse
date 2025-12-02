@@ -364,6 +364,7 @@ export async function POST(request: NextRequest) {
         const candidateRecord: any = {
             id: `candidate-${Date.now()}`,
             fileId: fileRecord.id,
+            filePath: fileRecord.filePath,
             ...candidateData,
             parsedAt: new Date().toISOString()
         };

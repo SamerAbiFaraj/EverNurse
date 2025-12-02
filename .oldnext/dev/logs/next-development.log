@@ -1,0 +1,699 @@
+[00:00:01.818] Server  LOG      ✓ Ready in 1201ms
+[00:00:14.575] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:25.356] Browser LOG     🚀 Starting upload...
+[00:00:25.512] Server  LOG     🎯 UPLOAD API CALLED - Processing files...
+[00:00:25.516] Server  LOG     📁 Received 1 file(s)
+[00:00:25.528] Server  LOG     📄 Processing: SamerCV.docx (application/vnd.openxmlformats-officedocument.wordprocessingml.document)
+[00:00:25.530] Server  LOG     💾 Saving file...
+[00:00:25.549] Server  LOG     ✅ File saved and recorded: "file-1764649960538"
+[00:00:25.550] Server  LOG     ✅ Upload completed successfully
+[00:00:25.661] Browser LOG     ✅ Upload successful! [{"id":"file-1764649960538","message":"File uploaded successfully - ready for parsing","originalName":"SamerCV.docx","status":"processing"}]
+[00:00:25.661] Browser LOG     🔍 Starting CV processing for: file-1764649960538
+[00:00:27.644] Server  LOG     🎯 PARSE API CALLED - Starting parsing process...
+[00:00:27.645] Server  LOG     📁 File ID received: "file-1764649960538"
+[00:00:27.645] Server  LOG     📖 Reading database...
+[00:00:27.654] Server  LOG     📊 Database files count: 11
+[00:00:27.655] Server  LOG     ✅ File found: "SamerCV.docx"
+[00:00:27.656] Server  LOG     📄 File details: {}
+[00:00:27.657] Server  LOG     📖 Reading file from disk...
+[00:00:27.658] Server  LOG     ✅ File read successfully, size: 33167 "bytes"
+[00:00:27.659] Server  LOG     🔧 Starting DOCX parsing...
+[00:00:27.660] Server  LOG     📄 Parsing DOCX file...
+[00:00:28.136] Server  LOG     ✅ DOCX parsed successfully, text length: 8761
+[00:00:28.137] Server  LOG     ✅ File parsing completed, extracted text length: 8761
+[00:00:28.137] Server  LOG     🔧 Starting data extraction...
+[00:00:28.138] Server  LOG     🔍 Extracting candidate data from text...
+[00:00:28.138] Server  LOG     📝 Text sample (first 500 chars): "SAMER ABI FARAJ Harat Al Amrousieh Choueifat-Lebanon Tel: 961-5-431835\n\nMobile: 961-3-136910\n\nE-mail:  sam_751225@hotmail.com\n\n\n\n\n\nPROFESSIONAL SUMMARY:\n\nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent\n\nreputation for leading and managing a number of successful projects, dealing with stakeholders, business owners, resolving problems, optimizing solutions, and driving the overall business.\n\n\n\nPROFESSIONAL EXPERIENCE\n\nInternational & Communication S"
+[00:00:28.139] Server  LOG     🔍 Extracting name from text...
+[00:00:28.141] Server  LOG     ✅ Extracted from filename: {}
+[00:00:28.141] Server  LOG     ✅ Using name from filename: "Samercv"
+[00:00:28.142] Server  LOG     ✅ Name extracted: "Samercv"
+[00:00:28.143] Server  LOG     ✅ Email extracted: "sam_751225@hotmail.com"
+[00:00:28.143] Server  LOG     ✅ Phone extracted: " 961-5-431835"
+[00:00:28.144] Server  LOG     ✅ Experience extracted: 17 "years from pattern:" {}
+[00:00:28.146] Server  LOG     ✅ Skills found: ["ICU","ER","Project Management","IT","Software","Development","Database","Cloud","FinTech","Banking","Credit Card","Payment","Digital","Transformation","Integration","Management","Planning","Stakeholder","Business Analysis"]
+[00:00:28.148] Server  LOG     ✅ Licenses found: ["PMP","PCI-DSS"]
+[00:00:28.148] Server  LOG     ✅ Location found: "Lebanon"
+[00:00:28.149] Server  LOG     ✅ Final extracted data: {}
+[00:00:28.150] Server  LOG     🧠 Generating embedding for text (length: 1256 "chars)"
+[00:00:28.754] Server  LOG     ✅ Embedding generated (dimensions: 1536 ")"
+[00:00:28.754] Server  LOG     💾 Saving updated database...
+[00:00:28.760] Server  LOG     ✅ Successfully parsed real CV: Samercv
+[00:00:28.870] Browser LOG     📨 Parse API response: {"candidate":{"email":"sam_751225@hotmail.com","embedding":[-0.016233718022704124,-0.05203518643975258,0.06692316383123398,0.029581978917121887,-0.01437878143042326,0.003270384855568409,-0.005337486043572426,0.014887980185449123,-0.00228381366468966,-0.018561480566859245,0.033340346068143845,-0.04611879214644432,-0.04667648300528526,-0.028612079098820686,0.054653920233249664,0.07109373807907104,-0.030212415382266045,0.017870424315333366,0.004943463951349258,0.018428118899464607,0.05087130516767502,0.05732114613056183,0.0029748680535703897,-0.004325151909142733,0.0264298003166914,-0.028660573065280914,-0.04757364094257355,0.025120435282588005,0.002365648979321122,-0.05222916603088379,0.051307760179042816,-0.04299085959792137,-0.02446575090289116,0.022380463778972626,-0.0012267731362953782,0.05572080984711647,-0.0018155333818867803,0.005325362551957369,-0.012632960453629494,0.0019079770427197218,-0.024817340075969696,-0.015203197486698627,0.033316098153591156,0.03433449566364288,0.01865847036242485,-0.024199029430747032,-0.018367499113082886,-0.010141527280211449,0.04066309705376625,0.046264275908470154,-0.009195873513817787,-0.0031764255836606026,-0.01025670301169157,0.0621221549808979,0.0024186905939131975,-0.03899001702666283,0.04396076127886772,0.004246347583830357,-0.013130034320056438,-0.02004057914018631,0.018925191834568977,0.01846448890864849,0.019749607890844345,-0.006504398304969072,-0.03258867189288139,0.010638601146638393,-0.027666425332427025,0.008498757146298885,0.003700778353959322,-0.000916101795155555,0.020004207268357277,0.04027513787150383,0.04536711797118187,0.009074635803699493,0.019337400794029236,-0.03421325609087944,-0.03302512690424919,-0.0109477574005723,0.014172677882015705,-0.026623781770467758,-0.019507132470607758,-0.029412247240543365,0.0228654146194458,-0.014293915592133999,-0.030212415382266045,0.005079856142401695,-0.06934791803359985,-0.06284958124160767,0.021107468754053116,0.019579876214265823,-0.027302712202072144,0.06348001956939697,-0.047985851764678955,-0.005082887131720781,0.010529487393796444,-0.04122079163789749,-0.008729108609259129,0.004485792014747858,0.010911385528743267,0.05654522776603699,"... 1435 items not stringified"],"embeddingGeneratedAt":"2025-12-02T04:32:43.763Z","experience":17,"fileId":"file-1764649960538","id":"candidate-1764649963158","licenses":["PMP","PCI-DSS"],"location":"Lebanon","name":"Samercv","parsedAt":"2025-12-02T04:32:43.158Z","phone":" 961-5-431835","rawText":"SAMER ABI FARAJ Harat Al Amrousieh Choueifat-Lebanon Tel: 961-5-431835\n\nMobile: 961-3-136910\n\nE-mail:  sam_751225@hotmail.com\n\n\n\n\n\nPROFESSIONAL SUMMARY:\n\nWith 17 years’ experience in the Financial and Credit Card industries I have gained an excellent\n\nreputation for leading and managing a number of successful projects, dealing with stakeholders, business owners, resolving problems, optimizing solutions, and driving the overall business.\n\n\n\nPROFESSIONAL EXPERIENCE\n\nInternational & Communication Systems (ICC Group)\n\nProject Manager Consultant\tBeirut, Lebanon\n\nOct 2023 – Present\n\n\n\nMain Responsibilities\n\n\tLead the team and grow the FinTech organization.\n\n\tHelp the team(s) master the newest development tools, workflows, and business processes.\n\n\tMentor and guide the internal team on the business and technical aspects.\n\n\tStay current with industry trends and best practices in service delivery for FinTech and integrate innovative approaches to enhance overall effectiveness.\n\n\tCollaborat","skills":["ICU","ER","Project Management","IT","Software","Development","Database","Cloud","FinTech","Banking","Credit Card","Payment","Digital","Transformation","Integration","Management","Planning","Stakeholder","Business Analysis"]},"message":"CV parsed successfully with real data extraction","success":true}
+[00:00:28.870] Browser LOG     ✅ CV parsed: Samercv
+[00:00:28.976] Server  LOG     🎯 Matching candidate: Samercv
+[00:00:28.981] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:00:28.981] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:00:29.228] Server  LOG     ✅ Generated 1 embeddings
+[00:00:29.229] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:00:29.440] Server  LOG     ✅ Generated 1 embeddings
+[00:00:29.441] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:00:29.944] Server  LOG     ✅ Generated 19 embeddings
+[00:00:29.945] Server  LOG     📊 Cosine similarity: "0.2118"
+[00:00:29.946] Server  LOG     📊 Cosine similarity: "0.2968"
+[00:00:29.946] Server  LOG     📊 Cosine similarity: "0.2239"
+[00:00:29.947] Server  LOG     📊 Cosine similarity: "0.3129"
+[00:00:29.947] Server  LOG     📊 Cosine similarity: "0.2270"
+[00:00:29.948] Server  LOG     📊 Cosine similarity: "0.3097"
+[00:00:29.948] Server  LOG     📊 Cosine similarity: "0.2645"
+[00:00:29.949] Server  LOG     📊 Cosine similarity: "0.1775"
+[00:00:29.949] Server  LOG     📊 Cosine similarity: "0.1087"
+[00:00:29.950] Server  LOG     📊 Cosine similarity: "0.1801"
+[00:00:29.950] Server  LOG     📊 Cosine similarity: "0.2060"
+[00:00:29.950] Server  LOG     📊 Cosine similarity: "0.2695"
+[00:00:29.951] Server  LOG     📊 Cosine similarity: "0.2435"
+[00:00:29.952] Server  LOG     📊 Cosine similarity: "0.1933"
+[00:00:29.952] Server  LOG     📊 Cosine similarity: "0.1964"
+[00:00:29.953] Server  LOG     📊 Cosine similarity: "0.2654"
+[00:00:29.953] Server  LOG     📊 Cosine similarity: "0.2565"
+[00:00:29.953] Server  LOG     📊 Cosine similarity: "0.1904"
+[00:00:29.954] Server  LOG     📊 Cosine similarity: "0.2293"
+[00:00:29.954] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:00:30.129] Server  LOG     ✅ Generated 19 embeddings
+[00:00:30.129] Server  LOG     📊 Cosine similarity: "0.1373"
+[00:00:30.130] Server  LOG     📊 Cosine similarity: "0.1441"
+[00:00:30.130] Server  LOG     📊 Cosine similarity: "0.1317"
+[00:00:30.131] Server  LOG     📊 Cosine similarity: "0.1781"
+[00:00:30.131] Server  LOG     📊 Cosine similarity: "0.1781"
+[00:00:30.132] Server  LOG     📊 Cosine similarity: "0.1376"
+[00:00:30.132] Server  LOG     📊 Cosine similarity: "0.0843"
+[00:00:30.133] Server  LOG     📊 Cosine similarity: "0.0901"
+[00:00:30.133] Server  LOG     📊 Cosine similarity: "0.1035"
+[00:00:30.133] Server  LOG     📊 Cosine similarity: "0.0970"
+[00:00:30.133] Server  LOG     📊 Cosine similarity: "0.1771"
+[00:00:30.134] Server  LOG     📊 Cosine similarity: "0.1504"
+[00:00:30.134] Server  LOG     📊 Cosine similarity: "0.1682"
+[00:00:30.134] Server  LOG     📊 Cosine similarity: "0.0832"
+[00:00:30.134] Server  LOG     📊 Cosine similarity: "0.1989"
+[00:00:30.135] Server  LOG     📊 Cosine similarity: "0.1158"
+[00:00:30.135] Server  LOG     📊 Cosine similarity: "0.1613"
+[00:00:30.135] Server  LOG     📊 Cosine similarity: "0.0933"
+[00:00:30.136] Server  LOG     📊 Cosine similarity: "0.1270"
+[00:00:30.136] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:00:30.143] Server  LOG     ✅ Found 2 potential matches for Samercv
+[00:00:30.252] Browser LOG     ✅ Matches found: 2
+[00:01:16.296] Server  LOG     ✅ Updated job: Project manager (job-1764574664064-50cli5pcu)
+[00:01:21.924] Server  LOG     🔍 RESULTS API CALLED - Fetching all candidates with matches...
+[00:01:21.930] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:01:22.309] Server  LOG     ✅ Generated 1 embeddings
+[00:01:22.311] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:01:22.957] Server  LOG     ✅ Generated 19 embeddings
+[00:01:22.957] Server  LOG     📊 Cosine similarity: "0.2118"
+[00:01:22.958] Server  LOG     📊 Cosine similarity: "0.2968"
+[00:01:22.959] Server  LOG     📊 Cosine similarity: "0.2239"
+[00:01:22.959] Server  LOG     📊 Cosine similarity: "0.3129"
+[00:01:22.959] Server  LOG     📊 Cosine similarity: "0.2270"
+[00:01:22.960] Server  LOG     📊 Cosine similarity: "0.3097"
+[00:01:22.960] Server  LOG     📊 Cosine similarity: "0.2645"
+[00:01:22.961] Server  LOG     📊 Cosine similarity: "0.1775"
+[00:01:22.963] Server  LOG     📊 Cosine similarity: "0.1087"
+[00:01:22.964] Server  LOG     📊 Cosine similarity: "0.1801"
+[00:01:22.965] Server  LOG     📊 Cosine similarity: "0.2060"
+[00:01:22.966] Server  LOG     📊 Cosine similarity: "0.2695"
+[00:01:22.967] Server  LOG     📊 Cosine similarity: "0.2435"
+[00:01:22.967] Server  LOG     📊 Cosine similarity: "0.1933"
+[00:01:22.969] Server  LOG     📊 Cosine similarity: "0.1964"
+[00:01:22.970] Server  LOG     📊 Cosine similarity: "0.2654"
+[00:01:22.971] Server  LOG     📊 Cosine similarity: "0.2565"
+[00:01:22.972] Server  LOG     📊 Cosine similarity: "0.1904"
+[00:01:22.972] Server  LOG     📊 Cosine similarity: "0.2293"
+[00:01:22.973] Server  LOG     📊 Cosine similarity: "0.3094"
+[00:01:22.974] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:01:23.203] Server  LOG     ✅ Generated 1 embeddings
+[00:01:23.204] Server  LOG     📊 Cosine similarity: "0.2573"
+[00:01:23.204] Server  LOG     📊 Cosine similarity: "0.3080"
+[00:01:23.205] Server  LOG     📊 Cosine similarity: "0.2973"
+[00:01:23.205] Server  LOG     📊 Cosine similarity: "0.3592"
+[00:01:23.206] Server  LOG     📊 Cosine similarity: "0.2571"
+[00:01:23.206] Server  LOG     📊 Cosine similarity: "0.2919"
+[00:01:23.207] Server  LOG     📊 Cosine similarity: "0.2804"
+[00:01:23.207] Server  LOG     📊 Cosine similarity: "0.3509"
+[00:01:23.208] Server  LOG     📊 Cosine similarity: "0.1683"
+[00:01:23.209] Server  LOG     📊 Cosine similarity: "0.1770"
+[00:01:23.210] Server  LOG     📊 Cosine similarity: "0.2669"
+[00:01:23.210] Server  LOG     📊 Cosine similarity: "0.2592"
+[00:01:23.211] Server  LOG     📊 Cosine similarity: "0.2868"
+[00:01:23.212] Server  LOG     📊 Cosine similarity: "0.2798"
+[00:01:23.212] Server  LOG     📊 Cosine similarity: "0.3240"
+[00:01:23.213] Server  LOG     📊 Cosine similarity: "0.2432"
+[00:01:23.213] Server  LOG     📊 Cosine similarity: "0.2033"
+[00:01:23.214] Server  LOG     📊 Cosine similarity: "0.1640"
+[00:01:23.214] Server  LOG     📊 Cosine similarity: "0.2251"
+[00:01:23.215] Server  LOG     📊 Cosine similarity: "0.6482"
+[00:01:23.224] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.226] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.228] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.244] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.256] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.265] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.268] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.270] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.271] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.273] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.274] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.277] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:23.277] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:01:23.279] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.279] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.280] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.285] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.286] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.286] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.287] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.288] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.288] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.289] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.289] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.290] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:23.290] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:01:23.291] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.292] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.292] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.293] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.294] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.294] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.295] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.295] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.296] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.296] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.297] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.297] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:23.298] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:01:23.298] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.299] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.299] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.300] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.301] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.302] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.303] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.303] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.304] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.304] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.305] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:23.305] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:23.305] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:01:23.306] Server  LOG     ✅ Results fetched: {}
+[00:01:23.321] Server  LOG     🔍 RESULTS API CALLED - Fetching all candidates with matches...
+[00:01:23.327] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:01:23.688] Server  LOG     ✅ Generated 1 embeddings
+[00:01:23.689] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:01:24.324] Server  LOG     ✅ Generated 19 embeddings
+[00:01:24.325] Server  LOG     📊 Cosine similarity: "0.2118"
+[00:01:24.325] Server  LOG     📊 Cosine similarity: "0.2968"
+[00:01:24.326] Server  LOG     📊 Cosine similarity: "0.2239"
+[00:01:24.326] Server  LOG     📊 Cosine similarity: "0.3129"
+[00:01:24.326] Server  LOG     📊 Cosine similarity: "0.2270"
+[00:01:24.326] Server  LOG     📊 Cosine similarity: "0.3098"
+[00:01:24.327] Server  LOG     📊 Cosine similarity: "0.2645"
+[00:01:24.327] Server  LOG     📊 Cosine similarity: "0.1775"
+[00:01:24.327] Server  LOG     📊 Cosine similarity: "0.1087"
+[00:01:24.327] Server  LOG     📊 Cosine similarity: "0.1800"
+[00:01:24.328] Server  LOG     📊 Cosine similarity: "0.2059"
+[00:01:24.328] Server  LOG     📊 Cosine similarity: "0.2695"
+[00:01:24.328] Server  LOG     📊 Cosine similarity: "0.2433"
+[00:01:24.328] Server  LOG     📊 Cosine similarity: "0.1934"
+[00:01:24.329] Server  LOG     📊 Cosine similarity: "0.1964"
+[00:01:24.329] Server  LOG     📊 Cosine similarity: "0.2654"
+[00:01:24.330] Server  LOG     📊 Cosine similarity: "0.2565"
+[00:01:24.330] Server  LOG     📊 Cosine similarity: "0.1904"
+[00:01:24.331] Server  LOG     📊 Cosine similarity: "0.2293"
+[00:01:24.331] Server  LOG     📊 Cosine similarity: "0.3094"
+[00:01:24.332] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:01:24.560] Server  LOG     ✅ Generated 1 embeddings
+[00:01:24.561] Server  LOG     📊 Cosine similarity: "0.2573"
+[00:01:24.563] Server  LOG     📊 Cosine similarity: "0.3080"
+[00:01:24.564] Server  LOG     📊 Cosine similarity: "0.2973"
+[00:01:24.565] Server  LOG     📊 Cosine similarity: "0.3592"
+[00:01:24.566] Server  LOG     📊 Cosine similarity: "0.2571"
+[00:01:24.567] Server  LOG     📊 Cosine similarity: "0.2919"
+[00:01:24.568] Server  LOG     📊 Cosine similarity: "0.2804"
+[00:01:24.569] Server  LOG     📊 Cosine similarity: "0.3509"
+[00:01:24.569] Server  LOG     📊 Cosine similarity: "0.1683"
+[00:01:24.570] Server  LOG     📊 Cosine similarity: "0.1770"
+[00:01:24.570] Server  LOG     📊 Cosine similarity: "0.2669"
+[00:01:24.571] Server  LOG     📊 Cosine similarity: "0.2592"
+[00:01:24.571] Server  LOG     📊 Cosine similarity: "0.2866"
+[00:01:24.571] Server  LOG     📊 Cosine similarity: "0.2797"
+[00:01:24.572] Server  LOG     📊 Cosine similarity: "0.3240"
+[00:01:24.572] Server  LOG     📊 Cosine similarity: "0.2432"
+[00:01:24.573] Server  LOG     📊 Cosine similarity: "0.2033"
+[00:01:24.573] Server  LOG     📊 Cosine similarity: "0.1640"
+[00:01:24.574] Server  LOG     📊 Cosine similarity: "0.2251"
+[00:01:24.575] Server  LOG     📊 Cosine similarity: "0.6482"
+[00:01:24.576] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.577] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.578] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.580] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.581] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.582] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.582] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.583] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.584] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.585] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.586] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.587] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:24.587] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:01:24.588] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.589] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.589] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.590] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.591] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.591] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.592] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.593] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.594] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.595] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.596] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.597] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:24.597] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:01:24.598] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.599] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.599] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.601] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.602] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.603] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.603] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.604] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.604] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.605] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.605] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.606] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:24.606] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:01:24.608] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.609] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.609] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.610] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.611] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.611] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.612] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.612] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.613] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.615] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.618] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:24.618] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:01:24.619] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:01:24.619] Server  LOG     ✅ Results fetched: {}
+[00:02:03.124] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:03.175] Server  LOG     🔍 RESULTS API CALLED - Fetching all candidates with matches...
+[00:02:03.181] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:02:03.692] Server  LOG     ✅ Generated 1 embeddings
+[00:02:03.692] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:02:04.354] Server  LOG     ✅ Generated 19 embeddings
+[00:02:04.354] Server  LOG     📊 Cosine similarity: "0.2118"
+[00:02:04.355] Server  LOG     📊 Cosine similarity: "0.2968"
+[00:02:04.355] Server  LOG     📊 Cosine similarity: "0.2239"
+[00:02:04.355] Server  LOG     📊 Cosine similarity: "0.3129"
+[00:02:04.356] Server  LOG     📊 Cosine similarity: "0.2270"
+[00:02:04.356] Server  LOG     📊 Cosine similarity: "0.3097"
+[00:02:04.356] Server  LOG     📊 Cosine similarity: "0.2645"
+[00:02:04.357] Server  LOG     📊 Cosine similarity: "0.1775"
+[00:02:04.357] Server  LOG     📊 Cosine similarity: "0.1087"
+[00:02:04.357] Server  LOG     📊 Cosine similarity: "0.1801"
+[00:02:04.358] Server  LOG     📊 Cosine similarity: "0.2060"
+[00:02:04.358] Server  LOG     📊 Cosine similarity: "0.2695"
+[00:02:04.358] Server  LOG     📊 Cosine similarity: "0.2433"
+[00:02:04.359] Server  LOG     📊 Cosine similarity: "0.1934"
+[00:02:04.359] Server  LOG     📊 Cosine similarity: "0.1964"
+[00:02:04.360] Server  LOG     📊 Cosine similarity: "0.2654"
+[00:02:04.360] Server  LOG     📊 Cosine similarity: "0.2565"
+[00:02:04.360] Server  LOG     📊 Cosine similarity: "0.1904"
+[00:02:04.360] Server  LOG     📊 Cosine similarity: "0.2293"
+[00:02:04.361] Server  LOG     📊 Cosine similarity: "0.3094"
+[00:02:04.362] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:02:04.638] Server  LOG     ✅ Generated 1 embeddings
+[00:02:04.639] Server  LOG     📊 Cosine similarity: "0.2573"
+[00:02:04.639] Server  LOG     📊 Cosine similarity: "0.3080"
+[00:02:04.639] Server  LOG     📊 Cosine similarity: "0.2973"
+[00:02:04.640] Server  LOG     📊 Cosine similarity: "0.3592"
+[00:02:04.640] Server  LOG     📊 Cosine similarity: "0.2571"
+[00:02:04.640] Server  LOG     📊 Cosine similarity: "0.2919"
+[00:02:04.641] Server  LOG     📊 Cosine similarity: "0.2804"
+[00:02:04.641] Server  LOG     📊 Cosine similarity: "0.3509"
+[00:02:04.642] Server  LOG     📊 Cosine similarity: "0.1683"
+[00:02:04.642] Server  LOG     📊 Cosine similarity: "0.1770"
+[00:02:04.642] Server  LOG     📊 Cosine similarity: "0.2669"
+[00:02:04.643] Server  LOG     📊 Cosine similarity: "0.2592"
+[00:02:04.643] Server  LOG     📊 Cosine similarity: "0.2868"
+[00:02:04.643] Server  LOG     📊 Cosine similarity: "0.2798"
+[00:02:04.643] Server  LOG     📊 Cosine similarity: "0.3240"
+[00:02:04.644] Server  LOG     📊 Cosine similarity: "0.2432"
+[00:02:04.644] Server  LOG     📊 Cosine similarity: "0.2033"
+[00:02:04.644] Server  LOG     📊 Cosine similarity: "0.1640"
+[00:02:04.644] Server  LOG     📊 Cosine similarity: "0.2251"
+[00:02:04.645] Server  LOG     📊 Cosine similarity: "0.6482"
+[00:02:04.646] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.646] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.646] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.648] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.649] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.650] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.650] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.652] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.652] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.653] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.653] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.654] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:02:04.654] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:02:04.655] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.656] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.656] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.657] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.657] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.658] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.658] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.659] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.660] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.660] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.660] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.661] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:02:04.661] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:02:04.663] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.663] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.664] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.665] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.665] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.666] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.666] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.667] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.667] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.668] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.669] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.670] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:02:04.670] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:02:04.671] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.671] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.672] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.672] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.673] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.673] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.674] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.674] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.675] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.675] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.676] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:04.677] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:02:04.677] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:02:04.678] Server  LOG     ✅ Results fetched: {}
+[00:03:00.890] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:01.034] Server  LOG     🔍 RESULTS API CALLED - Fetching all candidates with matches...
+[00:03:01.059] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:03:01.742] Server  LOG     ✅ Generated 1 embeddings
+[00:03:01.743] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:03:02.416] Server  LOG     ✅ Generated 19 embeddings
+[00:03:02.416] Server  LOG     📊 Cosine similarity: "0.2117"
+[00:03:02.417] Server  LOG     📊 Cosine similarity: "0.2967"
+[00:03:02.419] Server  LOG     📊 Cosine similarity: "0.2238"
+[00:03:02.420] Server  LOG     📊 Cosine similarity: "0.3128"
+[00:03:02.421] Server  LOG     📊 Cosine similarity: "0.2270"
+[00:03:02.424] Server  LOG     📊 Cosine similarity: "0.3097"
+[00:03:02.425] Server  LOG     📊 Cosine similarity: "0.2644"
+[00:03:02.426] Server  LOG     📊 Cosine similarity: "0.1774"
+[00:03:02.426] Server  LOG     📊 Cosine similarity: "0.1086"
+[00:03:02.427] Server  LOG     📊 Cosine similarity: "0.1800"
+[00:03:02.428] Server  LOG     📊 Cosine similarity: "0.2059"
+[00:03:02.430] Server  LOG     📊 Cosine similarity: "0.2695"
+[00:03:02.436] Server  LOG     📊 Cosine similarity: "0.2434"
+[00:03:02.441] Server  LOG     📊 Cosine similarity: "0.1933"
+[00:03:02.442] Server  LOG     📊 Cosine similarity: "0.1963"
+[00:03:02.444] Server  LOG     📊 Cosine similarity: "0.2653"
+[00:03:02.446] Server  LOG     📊 Cosine similarity: "0.2565"
+[00:03:02.447] Server  LOG     📊 Cosine similarity: "0.1903"
+[00:03:02.450] Server  LOG     📊 Cosine similarity: "0.2292"
+[00:03:02.456] Server  LOG     📊 Cosine similarity: "0.3094"
+[00:03:02.459] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:03:02.834] Server  LOG     ✅ Generated 1 embeddings
+[00:03:02.835] Server  LOG     📊 Cosine similarity: "0.2574"
+[00:03:02.836] Server  LOG     📊 Cosine similarity: "0.3079"
+[00:03:02.837] Server  LOG     📊 Cosine similarity: "0.2973"
+[00:03:02.839] Server  LOG     📊 Cosine similarity: "0.3592"
+[00:03:02.842] Server  LOG     📊 Cosine similarity: "0.2571"
+[00:03:02.843] Server  LOG     📊 Cosine similarity: "0.2919"
+[00:03:02.849] Server  LOG     📊 Cosine similarity: "0.2806"
+[00:03:02.853] Server  LOG     📊 Cosine similarity: "0.3509"
+[00:03:02.853] Server  LOG     📊 Cosine similarity: "0.1683"
+[00:03:02.855] Server  LOG     📊 Cosine similarity: "0.1771"
+[00:03:02.856] Server  LOG     📊 Cosine similarity: "0.2669"
+[00:03:02.861] Server  LOG     📊 Cosine similarity: "0.2592"
+[00:03:02.862] Server  LOG     📊 Cosine similarity: "0.2868"
+[00:03:02.863] Server  LOG     📊 Cosine similarity: "0.2798"
+[00:03:02.870] Server  LOG     📊 Cosine similarity: "0.3239"
+[00:03:02.872] Server  LOG     📊 Cosine similarity: "0.2433"
+[00:03:02.876] Server  LOG     📊 Cosine similarity: "0.2034"
+[00:03:02.878] Server  LOG     📊 Cosine similarity: "0.1641"
+[00:03:02.886] Server  LOG     📊 Cosine similarity: "0.2253"
+[00:03:02.892] Server  LOG     📊 Cosine similarity: "0.6482"
+[00:03:02.901] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.904] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.906] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.910] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.911] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.913] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.916] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.920] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.922] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.923] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.925] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.928] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:03:02.930] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:03:02.934] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.937] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.938] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.940] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.944] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.947] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.949] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.951] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.952] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.953] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.955] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.956] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:03:02.957] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:03:02.961] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.964] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.965] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.968] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.970] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.972] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.973] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.977] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.979] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.980] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.982] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.982] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:03:02.983] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:03:02.986] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.988] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.989] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.995] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:02.999] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:03.003] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:03.012] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:03.018] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:03.022] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:03.026] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:03.027] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:03.030] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:03:03.031] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:03:03.033] Server  LOG     ✅ Results fetched: {}
+[00:04:00.755] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:00.838] Server  LOG     🔍 RESULTS API CALLED - Fetching all candidates with matches...
+[00:04:00.841] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:04:02.449] Server  LOG     ✅ Generated 1 embeddings
+[00:04:02.450] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:04:03.331] Server  LOG     ✅ Generated 19 embeddings
+[00:04:03.331] Server  LOG     📊 Cosine similarity: "0.2118"
+[00:04:03.332] Server  LOG     📊 Cosine similarity: "0.2967"
+[00:04:03.333] Server  LOG     📊 Cosine similarity: "0.2238"
+[00:04:03.333] Server  LOG     📊 Cosine similarity: "0.3129"
+[00:04:03.334] Server  LOG     📊 Cosine similarity: "0.2269"
+[00:04:03.334] Server  LOG     📊 Cosine similarity: "0.3097"
+[00:04:03.335] Server  LOG     📊 Cosine similarity: "0.2645"
+[00:04:03.335] Server  LOG     📊 Cosine similarity: "0.1774"
+[00:04:03.335] Server  LOG     📊 Cosine similarity: "0.1086"
+[00:04:03.336] Server  LOG     📊 Cosine similarity: "0.1800"
+[00:04:03.336] Server  LOG     📊 Cosine similarity: "0.2059"
+[00:04:03.337] Server  LOG     📊 Cosine similarity: "0.2694"
+[00:04:03.337] Server  LOG     📊 Cosine similarity: "0.2435"
+[00:04:03.338] Server  LOG     📊 Cosine similarity: "0.1933"
+[00:04:03.339] Server  LOG     📊 Cosine similarity: "0.1963"
+[00:04:03.340] Server  LOG     📊 Cosine similarity: "0.2653"
+[00:04:03.341] Server  LOG     📊 Cosine similarity: "0.2564"
+[00:04:03.342] Server  LOG     📊 Cosine similarity: "0.1903"
+[00:04:03.343] Server  LOG     📊 Cosine similarity: "0.2293"
+[00:04:03.344] Server  LOG     📊 Cosine similarity: "0.3094"
+[00:04:03.345] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:04:03.606] Server  LOG     ✅ Generated 1 embeddings
+[00:04:03.606] Server  LOG     📊 Cosine similarity: "0.2573"
+[00:04:03.607] Server  LOG     📊 Cosine similarity: "0.3080"
+[00:04:03.607] Server  LOG     📊 Cosine similarity: "0.2973"
+[00:04:03.607] Server  LOG     📊 Cosine similarity: "0.3592"
+[00:04:03.608] Server  LOG     📊 Cosine similarity: "0.2571"
+[00:04:03.608] Server  LOG     📊 Cosine similarity: "0.2919"
+[00:04:03.609] Server  LOG     📊 Cosine similarity: "0.2804"
+[00:04:03.609] Server  LOG     📊 Cosine similarity: "0.3509"
+[00:04:03.609] Server  LOG     📊 Cosine similarity: "0.1683"
+[00:04:03.609] Server  LOG     📊 Cosine similarity: "0.1770"
+[00:04:03.610] Server  LOG     📊 Cosine similarity: "0.2669"
+[00:04:03.610] Server  LOG     📊 Cosine similarity: "0.2592"
+[00:04:03.610] Server  LOG     📊 Cosine similarity: "0.2868"
+[00:04:03.611] Server  LOG     📊 Cosine similarity: "0.2798"
+[00:04:03.611] Server  LOG     📊 Cosine similarity: "0.3240"
+[00:04:03.611] Server  LOG     📊 Cosine similarity: "0.2432"
+[00:04:03.611] Server  LOG     📊 Cosine similarity: "0.2033"
+[00:04:03.612] Server  LOG     📊 Cosine similarity: "0.1640"
+[00:04:03.612] Server  LOG     📊 Cosine similarity: "0.2251"
+[00:04:03.612] Server  LOG     📊 Cosine similarity: "0.6482"
+[00:04:03.613] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.613] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.614] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.614] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.615] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.615] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.616] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.616] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.616] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.617] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.617] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.618] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:03.618] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:04:03.619] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.619] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.619] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.621] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.621] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.622] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.622] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.622] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.623] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.623] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.624] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.624] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:03.625] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:04:03.625] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.626] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.626] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.627] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.628] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.628] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.629] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.630] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.631] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.631] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.632] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.632] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:03.632] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:04:03.633] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.634] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.634] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.635] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.636] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.637] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.637] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.638] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.638] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.639] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.639] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:03.640] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:03.640] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:04:03.641] Server  LOG     ✅ Results fetched: {}
+[00:04:40.801] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:40.889] Server  LOG     🔍 RESULTS API CALLED - Fetching all candidates with matches...
+[00:04:40.895] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:04:41.285] Server  LOG     ✅ Generated 1 embeddings
+[00:04:41.285] Server  LOG     🧠 Generating 19 embeddings in batch...
+[00:04:41.961] Server  LOG     ✅ Generated 19 embeddings
+[00:04:41.961] Server  LOG     📊 Cosine similarity: "0.2118"
+[00:04:41.961] Server  LOG     📊 Cosine similarity: "0.2968"
+[00:04:41.962] Server  LOG     📊 Cosine similarity: "0.2239"
+[00:04:41.962] Server  LOG     📊 Cosine similarity: "0.3129"
+[00:04:41.962] Server  LOG     📊 Cosine similarity: "0.2270"
+[00:04:41.962] Server  LOG     📊 Cosine similarity: "0.3097"
+[00:04:41.963] Server  LOG     📊 Cosine similarity: "0.2645"
+[00:04:41.963] Server  LOG     📊 Cosine similarity: "0.1775"
+[00:04:41.963] Server  LOG     📊 Cosine similarity: "0.1087"
+[00:04:41.964] Server  LOG     📊 Cosine similarity: "0.1801"
+[00:04:41.964] Server  LOG     📊 Cosine similarity: "0.2060"
+[00:04:41.965] Server  LOG     📊 Cosine similarity: "0.2695"
+[00:04:41.966] Server  LOG     📊 Cosine similarity: "0.2435"
+[00:04:41.966] Server  LOG     📊 Cosine similarity: "0.1933"
+[00:04:41.967] Server  LOG     📊 Cosine similarity: "0.1964"
+[00:04:41.967] Server  LOG     📊 Cosine similarity: "0.2654"
+[00:04:41.968] Server  LOG     📊 Cosine similarity: "0.2565"
+[00:04:41.968] Server  LOG     📊 Cosine similarity: "0.1904"
+[00:04:41.969] Server  LOG     📊 Cosine similarity: "0.2293"
+[00:04:41.970] Server  LOG     📊 Cosine similarity: "0.3094"
+[00:04:41.970] Server  LOG     🧠 Generating 1 embeddings in batch...
+[00:04:42.241] Server  LOG     ✅ Generated 1 embeddings
+[00:04:42.242] Server  LOG     📊 Cosine similarity: "0.2573"
+[00:04:42.243] Server  LOG     📊 Cosine similarity: "0.3080"
+[00:04:42.243] Server  LOG     📊 Cosine similarity: "0.2973"
+[00:04:42.244] Server  LOG     📊 Cosine similarity: "0.3592"
+[00:04:42.244] Server  LOG     📊 Cosine similarity: "0.2571"
+[00:04:42.245] Server  LOG     📊 Cosine similarity: "0.2919"
+[00:04:42.246] Server  LOG     📊 Cosine similarity: "0.2804"
+[00:04:42.246] Server  LOG     📊 Cosine similarity: "0.3509"
+[00:04:42.247] Server  LOG     📊 Cosine similarity: "0.1683"
+[00:04:42.247] Server  LOG     📊 Cosine similarity: "0.1770"
+[00:04:42.248] Server  LOG     📊 Cosine similarity: "0.2669"
+[00:04:42.248] Server  LOG     📊 Cosine similarity: "0.2592"
+[00:04:42.249] Server  LOG     📊 Cosine similarity: "0.2868"
+[00:04:42.249] Server  LOG     📊 Cosine similarity: "0.2798"
+[00:04:42.250] Server  LOG     📊 Cosine similarity: "0.3240"
+[00:04:42.250] Server  LOG     📊 Cosine similarity: "0.2432"
+[00:04:42.251] Server  LOG     📊 Cosine similarity: "0.2033"
+[00:04:42.251] Server  LOG     📊 Cosine similarity: "0.1640"
+[00:04:42.252] Server  LOG     📊 Cosine similarity: "0.2251"
+[00:04:42.252] Server  LOG     📊 Cosine similarity: "0.6482"
+[00:04:42.254] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.255] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.256] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.258] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.259] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.260] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.260] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.261] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.261] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.262] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.264] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.265] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:42.265] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:04:42.267] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.268] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.269] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.271] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.272] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.273] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.273] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.274] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.275] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.276] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.277] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.278] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:42.279] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:04:42.280] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.281] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.282] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.285] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.286] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.286] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.287] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.288] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.289] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.290] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.291] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.292] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:42.292] Server  LOG     📊 Cosine similarity: "0.3095"
+[00:04:42.294] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__ba672644._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.295] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__939cc0ab._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.295] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\[root-of-the-server]__9360da57._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.297] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.298] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\.next\dev\server\chunks\node_modules_next_e587bafe._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.300] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.302] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.303] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.304] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.306] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.308] Server  ERROR   C:\EverNurse-Project\evernurse-cv-matcher\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:42.309] Server  ERROR   ⚠️ Semantic skill matching failed, falling back to exact match: TypeError: candidateSkillEmbeddings.entries is not a function or its return value is not iterable
+[00:04:42.310] Server  LOG     📊 Cosine similarity: "0.6480"
+[00:04:42.311] Server  LOG     ✅ Results fetched: {}

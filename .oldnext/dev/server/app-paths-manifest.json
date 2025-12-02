@@ -1,0 +1,11 @@
+{
+  "/api/jobs/route": "app/api/jobs/route.js",
+  "/api/matching/route": "app/api/matching/route.js",
+  "/api/parse/route": "app/api/parse/route.js",
+  "/api/results/route": "app/api/results/route.js",
+  "/api/upload/route": "app/api/upload/route.js",
+  "/jobs/page": "app/jobs/page.js",
+  "/page": "app/page.js",
+  "/results/page": "app/results/page.js",
+  "/upload/page": "app/upload/page.js"
+}

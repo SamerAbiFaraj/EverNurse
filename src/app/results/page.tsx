@@ -21,6 +21,7 @@ interface Candidate {
     experience: number;
     skills: string[];
     licenses: string[];
+    filePath?: string;
     matches: Match[];
 }
 
@@ -324,7 +325,16 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                             >
                                 Delete
                             </button>
-                            <button className="text-evernurse-teal text-sm font-medium hover:underline">
+                            <button
+                                onClick={() => {
+                                    if (candidate.filePath) {
+                                        window.open(candidate.filePath, '_blank');
+                                    } else {
+                                        alert('CV file not available');
+                                    }
+                                }}
+                                className="text-evernurse-teal text-sm font-medium hover:underline"
+                            >
                                 View Full CV
                             </button>
                         </div>

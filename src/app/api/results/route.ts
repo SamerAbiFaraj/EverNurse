@@ -70,6 +70,7 @@ export async function GET(request: NextRequest) {
                 skills: candidate.skills,
                 licenses: candidate.licenses,
                 location: candidate.location,
+                filePath: candidate.filePath,
                 matches: allMatches,
                 highestScore: allMatches.length > 0 ? allMatches[0].score : 0,
                 totalMatches: allMatches.length

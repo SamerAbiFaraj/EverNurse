@@ -52,9 +52,13 @@ export class ParserService {
             text.toLowerCase().includes(skill.toLowerCase())
         );
 
-        // Extract licenses
-        const licenses = ['DHA', 'DOH', 'MOH', 'HAAD'].filter(license =>
-            text.toUpperCase().includes(license)
+        // Extract licenses and certifications (FIXED: Now includes PMP and other professional certifications)
+        const healthcareLicenses = ['DHA', 'DOH', 'MOH', 'HAAD', 'BLS', 'ACLS', 'PALS', 'NRP', 'RN', 'LPN', 'CNA'];
+        const professionalCertifications = ['PMP', 'PRINCE2', 'Agile', 'Scrum Master', 'CSM', 'PCI-DSS', 'CISSP', 'CISA', 'ITIL', 'Six Sigma'];
+        const allLicenses = [...healthcareLicenses, ...professionalCertifications];
+
+        const licenses = allLicenses.filter(license =>
+            text.toUpperCase().includes(license.toUpperCase())
         );
 
         // Simple experience extraction (look for years patterns)
