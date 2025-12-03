@@ -143,8 +143,8 @@ export default function UploadPage() {
 
     return (
         <div className="container mx-auto p-6 max-w-4xl">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Upload CVs</h1>
-            <p className="text-gray-600 mb-8">
+            <h1 className="text-3xl font-bold text-black mb-2">Upload CVs</h1>
+            <p className="text-black mb-8">
                 Upload candidate CVs to automatically match them with open nursing positions
             </p>
 
@@ -163,15 +163,15 @@ export default function UploadPage() {
                         <svg className="w-16 h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
-                        <p className="text-lg font-medium text-gray-700">Drop CV files here or click to browse</p>
-                        <p className="text-sm text-gray-500 mt-2">Supports PDF, DOC, DOCX files • Max 10MB per file</p>
+                        <p className="text-lg font-medium text-black">Drop CV files here or click to browse</p>
+                        <p className="text-sm text-black mt-2">Supports PDF, DOC, DOCX files • Max 10MB per file</p>
                     </div>
                 </label>
 
                 {files.length > 0 && (
                     <div className="mt-6">
                         <div className="flex justify-between items-center mb-2">
-                            <p className="font-medium text-gray-700">
+                            <p className="font-medium text-black">
                                 {files.length} file(s) selected:
                             </p>
                             <button
@@ -181,7 +181,7 @@ export default function UploadPage() {
                                 Clear All
                             </button>
                         </div>
-                        <ul className="text-sm text-gray-600 bg-gray-50 rounded-lg p-4 max-h-40 overflow-y-auto">
+                        <ul className="text-sm text-black bg-gray-50 rounded-lg p-4 max-h-40 overflow-y-auto">
                             {files.map((file, index) => (
                                 <li key={index} className="flex items-center justify-between py-2 border-b last:border-b-0">
                                     <div className="flex items-center">
@@ -190,7 +190,7 @@ export default function UploadPage() {
                                         </svg>
                                         <span className="font-medium">{file.name}</span>
                                     </div>
-                                    <span className="text-xs text-gray-500">
+                                    <span className="text-xs text-black">
                                         {(file.size / 1024 / 1024).toFixed(2)} MB
                                     </span>
                                 </li>

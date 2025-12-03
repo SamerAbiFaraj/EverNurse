@@ -84,7 +84,7 @@ export default function JobsPage() {
                             <h1 className="text-4xl font-bold text-evernurse-dark mb-2 tracking-tight">
                                 Job Positions
                             </h1>
-                            <p className="text-gray-600">
+                            <p className="text-black">
                                 Manage your open roles and configure matching criteria.
                             </p>
                         </div>
@@ -118,7 +118,7 @@ export default function JobsPage() {
                             </svg>
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">No jobs created yet</h3>
-                        <p className="text-gray-500 mb-6">Create your first job position to start matching candidates.</p>
+                        <p className="text-black mb-6">Create your first job position to start matching candidates.</p>
                         <button
                             onClick={() => { setEditingJob(null); setIsModalOpen(true); }}
                             className="text-evernurse-teal font-medium hover:underline"
@@ -135,14 +135,14 @@ export default function JobsPage() {
                             <div className="flex justify-between items-start mb-4">
                                 <div>
                                     <h3 className="text-xl font-bold text-evernurse-dark group-hover:text-evernurse-teal transition-colors">{job.title}</h3>
-                                    <p className="text-sm text-gray-500 mt-1">{job.department}</p>
+                                    <p className="text-sm text-black mt-1">{job.department}</p>
                                 </div>
                                 <span className="bg-teal-50 text-evernurse-teal text-xs px-2 py-1 rounded border border-teal-100 font-medium">
                                     {job.matchThreshold}% Match
                                 </span>
                             </div>
 
-                            <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
+                            <div className="flex items-center gap-2 text-sm text-black mb-4">
                                 <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -150,7 +150,7 @@ export default function JobsPage() {
                                 {job.location}
                             </div>
 
-                            <p className="text-gray-600 text-sm mb-6 line-clamp-2 h-10">
+                            <p className="text-black text-sm mb-6 line-clamp-2 h-10">
                                 {job.description}
                             </p>
 
@@ -163,7 +163,7 @@ export default function JobsPage() {
                                 </button>
                                 <button
                                     onClick={() => handleDelete(job.id)}
-                                    className="flex-1 text-gray-700 hover:text-red-600 font-medium text-sm py-2 rounded border border-gray-200 hover:border-red-300 hover:bg-red-50 transition-all"
+                                    className="flex-1 text-black hover:text-red-600 font-medium text-sm py-2 rounded border border-gray-200 hover:border-red-300 hover:bg-red-50 transition-all"
                                 >
                                     Delete
                                 </button>
@@ -233,7 +233,7 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
                 <form onSubmit={handleSubmit} className="p-8 space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Job Title</label>
+                            <label className="block text-sm font-medium text-black mb-2">Job Title</label>
                             <input
                                 type="text"
                                 required
@@ -244,7 +244,7 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Department</label>
+                            <label className="block text-sm font-medium text-black mb-2">Department</label>
                             <input
                                 type="text"
                                 required
@@ -258,7 +258,7 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
+                            <label className="block text-sm font-medium text-black mb-2">Location</label>
                             <input
                                 type="text"
                                 required
@@ -269,7 +269,7 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Match Threshold (%)</label>
+                            <label className="block text-sm font-medium text-black mb-2">Match Threshold (%)</label>
                             <input
                                 type="number"
                                 min="0"
@@ -282,7 +282,7 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                        <label className="block text-sm font-medium text-black mb-2">Description</label>
                         <textarea
                             required
                             rows={4}
@@ -294,7 +294,7 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-black mb-2">
                             Requirements (comma separated)
                         </label>
                         <input
@@ -304,14 +304,14 @@ function JobFormModal({ job, onClose, onSave }: { job: Job | null, onClose: () =
                             className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-evernurse-teal focus:border-transparent transition-all"
                             placeholder="e.g. BLS, ACLS, 3+ years experience"
                         />
-                        <p className="text-xs text-gray-500 mt-1">Separate multiple requirements with commas</p>
+                        <p className="text-xs text-black mt-1">Separate multiple requirements with commas</p>
                     </div>
 
                     <div className="flex justify-end gap-3 pt-6 border-t border-gray-100">
                         <button
                             type="button"
                             onClick={onClose}
-                            className="px-6 py-2.5 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+                            className="px-6 py-2.5 border border-gray-300 rounded-lg text-black font-medium hover:bg-gray-50 transition-colors"
                         >
                             Cancel
                         </button>

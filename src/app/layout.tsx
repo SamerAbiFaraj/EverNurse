@@ -66,14 +66,14 @@ export default function RootLayout({
                     <div className="w-8 h-8 bg-[#00A99D] rounded flex items-center justify-center text-white font-bold">E</div>
                     <span className="text-xl font-bold">EverNurse</span>
                   </div>
-                  <p className="text-gray-400 max-w-md leading-relaxed">
+                  <p className="text-white max-w-md leading-relaxed">
                     Revolutionizing healthcare recruitment with AI-powered matching technology.
                     Connecting the best talent with world-class healthcare facilities.
                   </p>
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-6 text-evernurse-teal">Quick Links</h4>
-                  <ul className="space-y-3 text-gray-300">
+                  <ul className="space-y-3 text-white">
                     <li><Link href="/upload" className="hover:text-white transition-colors">Upload CVs</Link></li>
                     <li><Link href="/jobs" className="hover:text-white transition-colors">Job Positions</Link></li>
                     <li><Link href="/results" className="hover:text-white transition-colors">Matching Results</Link></li>
@@ -81,7 +81,7 @@ export default function RootLayout({
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-6 text-evernurse-teal">Contact</h4>
-                  <ul className="space-y-3 text-gray-300">
+                  <ul className="space-y-3 text-white">
                     <li className="flex items-center gap-2">
                       <span className="text-evernurse-teal">✉</span> support@evernurse.ae
                     </li>
@@ -94,7 +94,7 @@ export default function RootLayout({
                   </ul>
                 </div>
               </div>
-              <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+              <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-white text-sm">
                 <p>© {new Date().getFullYear()} EverNurse. All rights reserved.</p>
                 <div className="flex gap-6 mt-4 md:mt-0">
                   <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
@@ -113,7 +113,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link
       href={href}
-      className="text-gray-600 font-medium hover:text-evernurse-teal transition-colors relative group py-2"
+      className="text-black font-medium hover:text-evernurse-teal transition-colors relative group py-2"
     >
       {children}
       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00A99D] transition-all duration-300 group-hover:w-full"></span>

@@ -21,7 +21,7 @@ export default function Home() {
             <span className="text-evernurse-teal bg-clip-text">Healthcare Match</span>
           </h1>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed mb-12">
             Revolutionize your healthcare recruitment with our intelligent CV matching system.
             Instantly connect top medical professionals with your open positions using advanced AI technology.
           </p>
@@ -54,7 +54,7 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-4xl font-bold text-evernurse-dark mb-2">10x</h3>
-            <p className="text-gray-600 font-medium">Faster Matching</p>
+            <p className="text-black font-medium">Faster Matching</p>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
@@ -64,7 +64,7 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-4xl font-bold text-evernurse-dark mb-2">95%</h3>
-            <p className="text-gray-600 font-medium">Match Accuracy</p>
+            <p className="text-black font-medium">Match Accuracy</p>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
@@ -74,7 +74,7 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-4xl font-bold text-evernurse-dark mb-2">24/7</h3>
-            <p className="text-gray-600 font-medium">Automated Processing</p>
+            <p className="text-black font-medium">Automated Processing</p>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-evernurse-dark mb-4">
               How It Works
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-black max-w-2xl mx-auto">
               Three simple steps to find your ideal healthcare professionals
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-evernurse-dark mb-4 group-hover:text-evernurse-teal transition-colors">
                 Upload CVs
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Simply drag and drop candidate CVs in PDF or DOCX format. Our system processes them instantly with advanced AI parsing.
               </p>
             </div>
@@ -111,7 +111,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-evernurse-dark mb-4 group-hover:text-blue-600 transition-colors">
                 AI Matching
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Our intelligent algorithm analyzes skills, experience, and qualifications to match candidates with your job positions.
               </p>
             </div>
@@ -124,7 +124,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-evernurse-dark mb-4 group-hover:text-purple-600 transition-colors">
                 Review Results
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-black leading-relaxed">
                 Access detailed match scores, qualified candidates, and comprehensive insights through our intuitive dashboard.
               </p>
             </div>

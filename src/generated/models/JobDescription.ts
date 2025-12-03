@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/client"
+//import type * as runtime from "@prisma/client/runtime/client"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -195,11 +195,11 @@ export type JobDescriptionAggregateArgs<ExtArgs extends runtime.Types.Extensions
 }
 
 export type GetJobDescriptionAggregateType<T extends JobDescriptionAggregateArgs> = {
-      [P in keyof T & keyof AggregateJobDescription]: P extends '_count' | 'count'
-    ? T[P] extends true
-      ? number
-      : Prisma.GetScalarType<T[P], AggregateJobDescription[P]>
-    : Prisma.GetScalarType<T[P], AggregateJobDescription[P]>
+  [P in keyof T & keyof AggregateJobDescription]: P extends '_count' | 'count'
+  ? T[P] extends true
+  ? number
+  : Prisma.GetScalarType<T[P], AggregateJobDescription[P]>
+  : Prisma.GetScalarType<T[P], AggregateJobDescription[P]>
 }
 
 
@@ -243,15 +243,15 @@ export type JobDescriptionGroupByOutputType = {
 type GetJobDescriptionGroupByPayload<T extends JobDescriptionGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<JobDescriptionGroupByOutputType, T['by']> &
-      {
-        [P in ((keyof T) & (keyof JobDescriptionGroupByOutputType))]: P extends '_count'
-          ? T[P] extends boolean
-            ? number
-            : Prisma.GetScalarType<T[P], JobDescriptionGroupByOutputType[P]>
-          : Prisma.GetScalarType<T[P], JobDescriptionGroupByOutputType[P]>
-      }
-    >
+    {
+      [P in ((keyof T) & (keyof JobDescriptionGroupByOutputType))]: P extends '_count'
+      ? T[P] extends boolean
+      ? number
+      : Prisma.GetScalarType<T[P], JobDescriptionGroupByOutputType[P]>
+      : Prisma.GetScalarType<T[P], JobDescriptionGroupByOutputType[P]>
+    }
   >
+>
 
 
 
@@ -1046,10 +1046,10 @@ export interface JobDescriptionDelegate<ExtArgs extends runtime.Types.Extensions
     args?: Prisma.Subset<T, JobDescriptionCountArgs>,
   ): Prisma.PrismaPromise<
     T extends runtime.Types.Utils.Record<'select', any>
-      ? T['select'] extends true
-        ? number
-        : Prisma.GetScalarType<T['select'], JobDescriptionCountAggregateOutputType>
-      : number
+    ? T['select'] extends true
+    ? number
+    : Prisma.GetScalarType<T['select'], JobDescriptionCountAggregateOutputType>
+    : number
   >
 
   /**
@@ -1103,8 +1103,8 @@ export interface JobDescriptionDelegate<ExtArgs extends runtime.Types.Extensions
       Prisma.Extends<'take', Prisma.Keys<T>>
     >,
     OrderByArg extends Prisma.True extends HasSelectOrTake
-      ? { orderBy: JobDescriptionGroupByArgs['orderBy'] }
-      : { orderBy?: JobDescriptionGroupByArgs['orderBy'] },
+    ? { orderBy: JobDescriptionGroupByArgs['orderBy'] }
+    : { orderBy?: JobDescriptionGroupByArgs['orderBy'] },
     OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>,
     ByFields extends Prisma.MaybeTupleToUnion<T['by']>,
     ByValid extends Prisma.Has<ByFields, OrderFields>,
@@ -1115,49 +1115,49 @@ export interface JobDescriptionDelegate<ExtArgs extends runtime.Types.Extensions
     ? `Error: "by" must not be empty.`
     : HavingValid extends Prisma.False
     ? {
-        [P in HavingFields]: P extends ByFields
-          ? never
-          : P extends string
-          ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-          : [
-              Error,
-              'Field ',
-              P,
-              ` in "having" needs to be provided in "by"`,
-            ]
-      }[HavingFields]
+      [P in HavingFields]: P extends ByFields
+      ? never
+      : P extends string
+      ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+      : [
+        Error,
+        'Field ',
+        P,
+        ` in "having" needs to be provided in "by"`,
+      ]
+    }[HavingFields]
     : 'take' extends Prisma.Keys<T>
     ? 'orderBy' extends Prisma.Keys<T>
-      ? ByValid extends Prisma.True
-        ? {}
-        : {
-            [P in OrderFields]: P extends ByFields
-              ? never
-              : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-          }[OrderFields]
-      : 'Error: If you provide "take", you also need to provide "orderBy"'
+    ? ByValid extends Prisma.True
+    ? {}
+    : {
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
+    : 'Error: If you provide "take", you also need to provide "orderBy"'
     : 'skip' extends Prisma.Keys<T>
     ? 'orderBy' extends Prisma.Keys<T>
-      ? ByValid extends Prisma.True
-        ? {}
-        : {
-            [P in OrderFields]: P extends ByFields
-              ? never
-              : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-          }[OrderFields]
-      : 'Error: If you provide "skip", you also need to provide "orderBy"'
+    ? ByValid extends Prisma.True
+    ? {}
+    : {
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
+    : 'Error: If you provide "skip", you also need to provide "orderBy"'
     : ByValid extends Prisma.True
     ? {}
     : {
-        [P in OrderFields]: P extends ByFields
-          ? never
-          : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-      }[OrderFields]
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
   >(args: Prisma.SubsetIntersection<T, JobDescriptionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetJobDescriptionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
-/**
- * Fields of the JobDescription model
- */
-readonly fields: JobDescriptionFieldRefs;
+  /**
+   * Fields of the JobDescription model
+   */
+  readonly fields: JobDescriptionFieldRefs;
 }
 
 /**
@@ -1212,7 +1212,7 @@ export interface JobDescriptionFieldRefs {
   readonly embedding: Prisma.FieldRef<"JobDescription", 'String'>
   readonly createdAt: Prisma.FieldRef<"JobDescription", 'DateTime'>
 }
-    
+
 
 // Custom InputTypes
 /**

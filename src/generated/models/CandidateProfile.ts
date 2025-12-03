@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/client"
+//import type * as runtime from "@prisma/client/runtime/client"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -193,11 +193,11 @@ export type CandidateProfileAggregateArgs<ExtArgs extends runtime.Types.Extensio
 }
 
 export type GetCandidateProfileAggregateType<T extends CandidateProfileAggregateArgs> = {
-      [P in keyof T & keyof AggregateCandidateProfile]: P extends '_count' | 'count'
-    ? T[P] extends true
-      ? number
-      : Prisma.GetScalarType<T[P], AggregateCandidateProfile[P]>
-    : Prisma.GetScalarType<T[P], AggregateCandidateProfile[P]>
+  [P in keyof T & keyof AggregateCandidateProfile]: P extends '_count' | 'count'
+  ? T[P] extends true
+  ? number
+  : Prisma.GetScalarType<T[P], AggregateCandidateProfile[P]>
+  : Prisma.GetScalarType<T[P], AggregateCandidateProfile[P]>
 }
 
 
@@ -242,15 +242,15 @@ export type CandidateProfileGroupByOutputType = {
 type GetCandidateProfileGroupByPayload<T extends CandidateProfileGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<CandidateProfileGroupByOutputType, T['by']> &
-      {
-        [P in ((keyof T) & (keyof CandidateProfileGroupByOutputType))]: P extends '_count'
-          ? T[P] extends boolean
-            ? number
-            : Prisma.GetScalarType<T[P], CandidateProfileGroupByOutputType[P]>
-          : Prisma.GetScalarType<T[P], CandidateProfileGroupByOutputType[P]>
-      }
-    >
+    {
+      [P in ((keyof T) & (keyof CandidateProfileGroupByOutputType))]: P extends '_count'
+      ? T[P] extends boolean
+      ? number
+      : Prisma.GetScalarType<T[P], CandidateProfileGroupByOutputType[P]>
+      : Prisma.GetScalarType<T[P], CandidateProfileGroupByOutputType[P]>
+    }
   >
+>
 
 
 
@@ -1214,10 +1214,10 @@ export interface CandidateProfileDelegate<ExtArgs extends runtime.Types.Extensio
     args?: Prisma.Subset<T, CandidateProfileCountArgs>,
   ): Prisma.PrismaPromise<
     T extends runtime.Types.Utils.Record<'select', any>
-      ? T['select'] extends true
-        ? number
-        : Prisma.GetScalarType<T['select'], CandidateProfileCountAggregateOutputType>
-      : number
+    ? T['select'] extends true
+    ? number
+    : Prisma.GetScalarType<T['select'], CandidateProfileCountAggregateOutputType>
+    : number
   >
 
   /**
@@ -1271,8 +1271,8 @@ export interface CandidateProfileDelegate<ExtArgs extends runtime.Types.Extensio
       Prisma.Extends<'take', Prisma.Keys<T>>
     >,
     OrderByArg extends Prisma.True extends HasSelectOrTake
-      ? { orderBy: CandidateProfileGroupByArgs['orderBy'] }
-      : { orderBy?: CandidateProfileGroupByArgs['orderBy'] },
+    ? { orderBy: CandidateProfileGroupByArgs['orderBy'] }
+    : { orderBy?: CandidateProfileGroupByArgs['orderBy'] },
     OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>,
     ByFields extends Prisma.MaybeTupleToUnion<T['by']>,
     ByValid extends Prisma.Has<ByFields, OrderFields>,
@@ -1283,49 +1283,49 @@ export interface CandidateProfileDelegate<ExtArgs extends runtime.Types.Extensio
     ? `Error: "by" must not be empty.`
     : HavingValid extends Prisma.False
     ? {
-        [P in HavingFields]: P extends ByFields
-          ? never
-          : P extends string
-          ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-          : [
-              Error,
-              'Field ',
-              P,
-              ` in "having" needs to be provided in "by"`,
-            ]
-      }[HavingFields]
+      [P in HavingFields]: P extends ByFields
+      ? never
+      : P extends string
+      ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+      : [
+        Error,
+        'Field ',
+        P,
+        ` in "having" needs to be provided in "by"`,
+      ]
+    }[HavingFields]
     : 'take' extends Prisma.Keys<T>
     ? 'orderBy' extends Prisma.Keys<T>
-      ? ByValid extends Prisma.True
-        ? {}
-        : {
-            [P in OrderFields]: P extends ByFields
-              ? never
-              : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-          }[OrderFields]
-      : 'Error: If you provide "take", you also need to provide "orderBy"'
+    ? ByValid extends Prisma.True
+    ? {}
+    : {
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
+    : 'Error: If you provide "take", you also need to provide "orderBy"'
     : 'skip' extends Prisma.Keys<T>
     ? 'orderBy' extends Prisma.Keys<T>
-      ? ByValid extends Prisma.True
-        ? {}
-        : {
-            [P in OrderFields]: P extends ByFields
-              ? never
-              : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-          }[OrderFields]
-      : 'Error: If you provide "skip", you also need to provide "orderBy"'
+    ? ByValid extends Prisma.True
+    ? {}
+    : {
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
+    : 'Error: If you provide "skip", you also need to provide "orderBy"'
     : ByValid extends Prisma.True
     ? {}
     : {
-        [P in OrderFields]: P extends ByFields
-          ? never
-          : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-      }[OrderFields]
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
   >(args: Prisma.SubsetIntersection<T, CandidateProfileGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCandidateProfileGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
-/**
- * Fields of the CandidateProfile model
- */
-readonly fields: CandidateProfileFieldRefs;
+  /**
+   * Fields of the CandidateProfile model
+   */
+  readonly fields: CandidateProfileFieldRefs;
 }
 
 /**
@@ -1382,7 +1382,7 @@ export interface CandidateProfileFieldRefs {
   readonly embedding: Prisma.FieldRef<"CandidateProfile", 'String'>
   readonly createdAt: Prisma.FieldRef<"CandidateProfile", 'DateTime'>
 }
-    
+
 
 // Custom InputTypes
 /**

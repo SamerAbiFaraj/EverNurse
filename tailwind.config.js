@@ -13,8 +13,8 @@ module.exports = {
           'teal-light': '#E0F2F1',
           dark: '#333333',
           light: '#F5F5F5',
-          text: '#212529',
-          'text-light': '#6C757D',
+          text: '#000000',
+          'text-light': '#000000',
         }
       },
       fontFamily: {

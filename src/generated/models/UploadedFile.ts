@@ -8,7 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-import type * as runtime from "@prisma/client/runtime/client"
+//import type * as runtime from "@prisma/client/runtime/client"
 import type * as $Enums from "../enums"
 import type * as Prisma from "../internal/prismaNamespace"
 
@@ -173,11 +173,11 @@ export type UploadedFileAggregateArgs<ExtArgs extends runtime.Types.Extensions.I
 }
 
 export type GetUploadedFileAggregateType<T extends UploadedFileAggregateArgs> = {
-      [P in keyof T & keyof AggregateUploadedFile]: P extends '_count' | 'count'
-    ? T[P] extends true
-      ? number
-      : Prisma.GetScalarType<T[P], AggregateUploadedFile[P]>
-    : Prisma.GetScalarType<T[P], AggregateUploadedFile[P]>
+  [P in keyof T & keyof AggregateUploadedFile]: P extends '_count' | 'count'
+  ? T[P] extends true
+  ? number
+  : Prisma.GetScalarType<T[P], AggregateUploadedFile[P]>
+  : Prisma.GetScalarType<T[P], AggregateUploadedFile[P]>
 }
 
 
@@ -216,15 +216,15 @@ export type UploadedFileGroupByOutputType = {
 type GetUploadedFileGroupByPayload<T extends UploadedFileGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<UploadedFileGroupByOutputType, T['by']> &
-      {
-        [P in ((keyof T) & (keyof UploadedFileGroupByOutputType))]: P extends '_count'
-          ? T[P] extends boolean
-            ? number
-            : Prisma.GetScalarType<T[P], UploadedFileGroupByOutputType[P]>
-          : Prisma.GetScalarType<T[P], UploadedFileGroupByOutputType[P]>
-      }
-    >
+    {
+      [P in ((keyof T) & (keyof UploadedFileGroupByOutputType))]: P extends '_count'
+      ? T[P] extends boolean
+      ? number
+      : Prisma.GetScalarType<T[P], UploadedFileGroupByOutputType[P]>
+      : Prisma.GetScalarType<T[P], UploadedFileGroupByOutputType[P]>
+    }
   >
+>
 
 
 
@@ -861,10 +861,10 @@ export interface UploadedFileDelegate<ExtArgs extends runtime.Types.Extensions.I
     args?: Prisma.Subset<T, UploadedFileCountArgs>,
   ): Prisma.PrismaPromise<
     T extends runtime.Types.Utils.Record<'select', any>
-      ? T['select'] extends true
-        ? number
-        : Prisma.GetScalarType<T['select'], UploadedFileCountAggregateOutputType>
-      : number
+    ? T['select'] extends true
+    ? number
+    : Prisma.GetScalarType<T['select'], UploadedFileCountAggregateOutputType>
+    : number
   >
 
   /**
@@ -918,8 +918,8 @@ export interface UploadedFileDelegate<ExtArgs extends runtime.Types.Extensions.I
       Prisma.Extends<'take', Prisma.Keys<T>>
     >,
     OrderByArg extends Prisma.True extends HasSelectOrTake
-      ? { orderBy: UploadedFileGroupByArgs['orderBy'] }
-      : { orderBy?: UploadedFileGroupByArgs['orderBy'] },
+    ? { orderBy: UploadedFileGroupByArgs['orderBy'] }
+    : { orderBy?: UploadedFileGroupByArgs['orderBy'] },
     OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>,
     ByFields extends Prisma.MaybeTupleToUnion<T['by']>,
     ByValid extends Prisma.Has<ByFields, OrderFields>,
@@ -930,49 +930,49 @@ export interface UploadedFileDelegate<ExtArgs extends runtime.Types.Extensions.I
     ? `Error: "by" must not be empty.`
     : HavingValid extends Prisma.False
     ? {
-        [P in HavingFields]: P extends ByFields
-          ? never
-          : P extends string
-          ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-          : [
-              Error,
-              'Field ',
-              P,
-              ` in "having" needs to be provided in "by"`,
-            ]
-      }[HavingFields]
+      [P in HavingFields]: P extends ByFields
+      ? never
+      : P extends string
+      ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+      : [
+        Error,
+        'Field ',
+        P,
+        ` in "having" needs to be provided in "by"`,
+      ]
+    }[HavingFields]
     : 'take' extends Prisma.Keys<T>
     ? 'orderBy' extends Prisma.Keys<T>
-      ? ByValid extends Prisma.True
-        ? {}
-        : {
-            [P in OrderFields]: P extends ByFields
-              ? never
-              : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-          }[OrderFields]
-      : 'Error: If you provide "take", you also need to provide "orderBy"'
+    ? ByValid extends Prisma.True
+    ? {}
+    : {
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
+    : 'Error: If you provide "take", you also need to provide "orderBy"'
     : 'skip' extends Prisma.Keys<T>
     ? 'orderBy' extends Prisma.Keys<T>
-      ? ByValid extends Prisma.True
-        ? {}
-        : {
-            [P in OrderFields]: P extends ByFields
-              ? never
-              : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-          }[OrderFields]
-      : 'Error: If you provide "skip", you also need to provide "orderBy"'
+    ? ByValid extends Prisma.True
+    ? {}
+    : {
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
+    : 'Error: If you provide "skip", you also need to provide "orderBy"'
     : ByValid extends Prisma.True
     ? {}
     : {
-        [P in OrderFields]: P extends ByFields
-          ? never
-          : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-      }[OrderFields]
+      [P in OrderFields]: P extends ByFields
+      ? never
+      : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+    }[OrderFields]
   >(args: Prisma.SubsetIntersection<T, UploadedFileGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUploadedFileGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
-/**
- * Fields of the UploadedFile model
- */
-readonly fields: UploadedFileFieldRefs;
+  /**
+   * Fields of the UploadedFile model
+   */
+  readonly fields: UploadedFileFieldRefs;
 }
 
 /**
@@ -1022,7 +1022,7 @@ export interface UploadedFileFieldRefs {
   readonly status: Prisma.FieldRef<"UploadedFile", 'FileStatus'>
   readonly createdAt: Prisma.FieldRef<"UploadedFile", 'DateTime'>
 }
-    
+
 
 // Custom InputTypes
 /**

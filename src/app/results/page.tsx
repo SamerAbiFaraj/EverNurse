@@ -89,7 +89,7 @@ export default function ResultsPage() {
                             <h1 className="text-4xl font-bold text-evernurse-dark mb-2 tracking-tight">
                                 Matching Dashboard
                             </h1>
-                            <p className="text-gray-600">
+                            <p className="text-black">
                                 Review and manage AI-matched candidates for your healthcare positions.
                             </p>
                         </div>
@@ -143,7 +143,7 @@ export default function ResultsPage() {
                 <div className="bg-white rounded-xl shadow-soft border border-gray-100 p-6 mb-8 animate-fade-in-up">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                         <div className="col-span-2">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Search Candidates</label>
+                            <label className="block text-sm font-medium text-black mb-2">Search Candidates</label>
                             <div className="relative">
                                 <input
                                     type="text"
@@ -158,7 +158,7 @@ export default function ResultsPage() {
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Min Match Score</label>
+                            <label className="block text-sm font-medium text-black mb-2">Min Match Score</label>
                             <select
                                 value={filter.minScore}
                                 onChange={(e) => setFilter({ ...filter, minScore: Number(e.target.value) })}
@@ -196,8 +196,8 @@ export default function ResultsPage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">No candidates found</h3>
-                        <p className="text-gray-500 mb-6">Try adjusting your filters or upload more CVs.</p>
+                        <h3 className="text-xl font-bold text-black mb-2">No candidates found</h3>
+                        <p className="text-black mb-6">Try adjusting your filters or upload more CVs.</p>
                         <button
                             onClick={() => setFilter({ minScore: 0, department: '', search: '' })}
                             className="text-evernurse-teal font-medium hover:underline"
@@ -258,7 +258,7 @@ function StatCard({ title, value, icon, color, delay }: { title: string, value: 
                 </div>
                 <span className={`text-2xl font-bold ${colors[color].split(' ')[0]}`}>{value}</span>
             </div>
-            <p className="text-gray-500 font-medium">{title}</p>
+            <p className="text-black font-medium">{title}</p>
         </div>
     );
 }
@@ -277,11 +277,11 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                         </div>
                         <div>
                             <h3 className="text-xl font-bold text-evernurse-dark">{candidate.name}</h3>
-                            <p className="text-gray-500 text-sm">Added recently</p>
+                            <p className="text-black text-sm">Added recently</p>
                         </div>
                     </div>
 
-                    <div className="space-y-3 text-sm text-gray-600">
+                    <div className="space-y-3 text-sm text-black">
                         <div className="flex items-center gap-3">
                             <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -303,10 +303,10 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                     </div>
 
                     <div className="mt-6">
-                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Key Skills</p>
+                        <p className="text-xs font-semibold text-black uppercase tracking-wider mb-2">Key Skills</p>
                         <div className="flex flex-wrap gap-1.5">
                             {candidate.skills.slice(0, 5).map((skill, i) => (
-                                <span key={i} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded border border-gray-200">
+                                <span key={i} className="bg-gray-100 text-black text-xs px-2 py-1 rounded border border-gray-200">
                                     {skill}
                                 </span>
                             ))}
@@ -346,11 +346,11 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                             <div key={i} className="bg-white border border-gray-200 rounded-lg p-4 hover:border-evernurse-teal transition-colors shadow-sm group">
                                 <div className="flex justify-between items-start mb-2">
                                     <div>
-                                        <h5 className="font-bold text-gray-900 group-hover:text-evernurse-teal transition-colors">{match.jobTitle}</h5>
-                                        <p className="text-sm text-gray-500">{match.department} • {match.location}</p>
+                                        <h5 className="font-bold text-black group-hover:text-evernurse-teal transition-colors">{match.jobTitle}</h5>
+                                        <p className="text-sm text-black">{match.department} • {match.location}</p>
                                     </div>
                                     <div className="text-right">
-                                        <span className={`text-2xl font-bold ${match.score >= (match.threshold || 70) ? 'text-green-600' : 'text-red-600'}`}>{match.score}%</span>
+                                        <span className={`text-2xl font-bold ${match.score >= 70 ? 'text-green-600' : 'text-red-600'}`}>{match.score}%</span>
                                     </div>
                                 </div>
                                 <div className="w-full bg-gray-100 rounded-full h-1.5 mb-3">
@@ -369,7 +369,7 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                                         </span>
                                     ))}
                                     {match.matchedSkills.length > 3 && (
-                                        <span className="text-gray-500 bg-gray-100 px-2 py-0.5 rounded border border-gray-200">
+                                        <span className="text-black bg-gray-100 px-2 py-0.5 rounded border border-gray-200">
                                             +{match.matchedSkills.length - 3} more
                                         </span>
                                     )}
@@ -377,7 +377,7 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                             </div>
                         ))}
                         {candidate.matches.length === 0 && (
-                            <div className="text-center py-8 text-gray-500 bg-gray-50 rounded-lg border border-dashed border-gray-200">
+                            <div className="text-center py-8 text-black bg-gray-50 rounded-lg border border-dashed border-gray-200">
                                 No qualifying matches found for this candidate.
                             </div>
                         )}
@@ -387,7 +387,7 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                         <button className="flex-1 bg-[#00A99D] text-white py-2.5 rounded-lg font-medium hover:bg-[#008f85] transition-all shadow-sm hover:shadow-md">
                             Contact Candidate
                         </button>
-                        <button className="flex-1 bg-white border border-gray-300 text-gray-700 py-2.5 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+                        <button className="flex-1 bg-white border border-gray-300 text-black py-2.5 rounded-lg font-medium hover:bg-gray-50 transition-colors">
                             Save Profile
                         </button>
                     </div>
