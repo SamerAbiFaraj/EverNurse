@@ -328,7 +328,8 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                             <button
                                 onClick={() => {
                                     if (candidate.filePath) {
-                                        window.open(candidate.filePath, '_blank');
+                                        // Use API route to serve the file
+                                        window.open(`/api/files?path=${encodeURIComponent(candidate.filePath)}`, '_blank');
                                     } else {
                                         alert('CV file not available');
                                     }
@@ -349,7 +350,7 @@ function CandidateCard({ candidate, index, onDelete }: { candidate: Candidate, i
                                         <p className="text-sm text-gray-500">{match.department} • {match.location}</p>
                                     </div>
                                     <div className="text-right">
-                                        <span className="text-2xl font-bold text-evernurse-teal">{match.score}%</span>
+                                        <span className={`text-2xl font-bold ${match.score >= (match.threshold || 70) ? 'text-green-600' : 'text-red-600'}`}>{match.score}%</span>
                                     </div>
                                 </div>
                                 <div className="w-full bg-gray-100 rounded-full h-1.5 mb-3">
