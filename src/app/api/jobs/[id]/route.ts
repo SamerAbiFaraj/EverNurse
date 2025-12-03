@@ -1,38 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readFile, writeFile } from 'fs/promises';
-
-const DB_PATH = './uploads/database.json';
-
-// GET /api/jobs/[id] - Get single job
-export async function GET(
-    request: NextRequest,
-    { params }: { params: { id: string } }
-) {
-    try {
-        const { id } = params;
-
-        const db = JSON.parse(await readFile(DB_PATH, 'utf-8'));
-        const job = db.jobs?.find((j: any) => j.id === id);
-
-        if (!job) {
-            return NextResponse.json(
-                { error: 'Job not found' },
-                { status: 404 }
+{ error: 'Job not found' },
+{ status: 404 }
             );
         }
 
-        return NextResponse.json({
-            success: true,
-            job
-        });
+return NextResponse.json({
+    success: true,
+    job
+});
 
     } catch (error) {
-        console.error('❌ Error fetching job:', error);
-        return NextResponse.json(
-            { error: 'Failed to fetch job' },
-            { status: 500 }
-        );
-    }
+    console.error('❌ Error fetching job:', error);
+    return NextResponse.json(
+        { error: 'Failed to fetch job' },
+        { status: 500 }
+    );
+}
 }
 
 // PUT /api/jobs/[id] - Update job
