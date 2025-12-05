@@ -1,4 +1,4 @@
-import pdf from 'pdf-parse';
+import pdf from 'pdf-parse-fixed';
 import mammoth from 'mammoth';
 
 export interface ParsedCV {

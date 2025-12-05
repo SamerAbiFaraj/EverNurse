@@ -11,7 +11,7 @@ module.exports = {
           teal: '#00A99D',
           'teal-hover': '#008F85',
           'teal-light': '#E0F2F1',
-          dark: '#333333',
+          dark: '#000000',
           light: '#F5F5F5',
           text: '#000000',
           'text-light': '#000000',

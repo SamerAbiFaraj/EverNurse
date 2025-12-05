@@ -97,7 +97,7 @@ export default function DebugPage() {
 
     return (
         <div className="container mx-auto p-6 max-w-4xl">
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">API Debug Page</h1>
+            <h1 className="text-3xl font-bold text-black mb-6">API Debug Page</h1>
 
             <div className="space-y-4 mb-6">
                 <button
@@ -136,7 +136,7 @@ export default function DebugPage() {
                 <div className="mb-2 font-bold">Debug Logs:</div>
                 <div className="h-96 overflow-y-auto">
                     {logs.length === 0 ? (
-                        <div className="text-gray-500">No logs yet. Click buttons above to test.</div>
+                        <div className="text-black">No logs yet. Click buttons above to test.</div>
                     ) : (
                         logs.map((log, index) => (
                             <div key={index} className="mb-1 border-b border-gray-700 pb-1">
